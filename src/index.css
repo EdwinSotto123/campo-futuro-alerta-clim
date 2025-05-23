@@ -5,83 +5,68 @@
 
 @layer base {
   :root {
-    --background: 43 70% 97%;
-    --foreground: 20 10% 15%;
-
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 20 10% 15%;
-
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 20 10% 15%;
-
-    --primary: 22 76% 46%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 43 30% 96%;
-    --secondary-foreground: 20 10% 15%;
-
-    --muted: 43 30% 96%;
-    --muted-foreground: 20 5% 64%;
-
-    --accent: 43 30% 96%;
-    --accent-foreground: 20 10% 15%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 20 30% 91%;
-    --input: 20 30% 91%;
-    --ring: 22 76% 46%;
-
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 28 92% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 28 92% 53%;
     --radius: 0.5rem;
 
-    --sidebar-background: 43 50% 98%;
-    --sidebar-foreground: 20 10% 15%;
-    --sidebar-primary: 22 76% 46%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 20 30% 94%;
-    --sidebar-accent-foreground: 20 10% 15%;
-    --sidebar-border: 20 30% 91%;
-    --sidebar-ring: 22 76% 46%;
+    /* Sidebar variables */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222.2 84% 4.9%;
+    --sidebar-primary: 28 92% 53%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 210 40% 96.1%;
+    --sidebar-accent-foreground: 222.2 47.4% 11.2%;
+    --sidebar-border: 214.3 31.8% 91.4%;
+    --sidebar-ring: 28 92% 53%;
   }
 
   .dark {
-    --background: 20 20% 6%;
-    --foreground: 20 20% 90%;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 28 92% 53%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 28 92% 53%;
 
-    --card: 20 20% 8%;
-    --card-foreground: 20 20% 90%;
-
-    --popover: 20 20% 8%;
-    --popover-foreground: 20 20% 90%;
-
-    --primary: 22 76% 56%;
-    --primary-foreground: 20 20% 6%;
-
-    --secondary: 20 20% 12%;
-    --secondary-foreground: 20 20% 90%;
-
-    --muted: 20 20% 12%;
-    --muted-foreground: 20 10% 60%;
-
-    --accent: 20 20% 12%;
-    --accent-foreground: 20 20% 90%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 20 20% 90%;
-
-    --border: 20 20% 18%;
-    --input: 20 20% 18%;
-    --ring: 22 76% 56%;
-    
-    --sidebar-background: 20 20% 8%;
-    --sidebar-foreground: 20 20% 90%;
-    --sidebar-primary: 22 76% 56%;
-    --sidebar-primary-foreground: 20 20% 8%;
-    --sidebar-accent: 20 20% 12%;
-    --sidebar-accent-foreground: 20 20% 90%;
-    --sidebar-border: 20 20% 18%;
-    --sidebar-ring: 22 76% 56%;
+    /* Sidebar variables (dark) */
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 28 92% 53%;
+    --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 28 92% 53%;
   }
 }
 
@@ -89,28 +74,34 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
-    background-image: linear-gradient(135deg, rgb(254 242 219) 0%, rgb(250 227 185) 100%);
-    min-height: 100vh;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer utilities {
-  .text-gradient {
-    @apply bg-gradient-to-r from-agriculture-terracotta to-agriculture-brown bg-clip-text text-transparent;
-  }
-  
   .agriculture-gradient {
-    background: linear-gradient(135deg, #D35400 0%, #A04000 100%);
+    background: linear-gradient(135deg, #D35400, #A04000, #C27500);
   }
   
-  .earth-gradient {
-    background: linear-gradient(135deg, #C27500 0%, #A67C00 100%);
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #D35400, #A04000, #C27500);
+  }
+
+  /* Personalized utilities for background gradients */
+  .bg-agriculture-warm {
+    background: linear-gradient(135deg, #D35400, #F1C40F);
   }
   
-  .sky-gradient {
-    background: linear-gradient(135deg, #3498DB 0%, #2980B9 100%);
+  .bg-agriculture-earth {
+    background: linear-gradient(135deg, #C27500, #A04000);
+  }
+  
+  .bg-agriculture-sky {
+    background: linear-gradient(135deg, #3498DB, #5DADE2);
   }
 }

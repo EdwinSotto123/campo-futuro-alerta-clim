@@ -7,13 +7,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AppLayout from "./components/AppLayout";
+import MonitoreoPage from "./pages/Monitoreo";
+import ConsejosPage from "./pages/Consejos";
+import FinanciamientoPage from "./pages/Financiamiento";
+import ComunidadPage from "./pages/Comunidad";
 
-// Create placeholder pages for our routes
+// Create placeholder pages for routes without full implementation
 const AlertasPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Alertas Climáticas</h1><p>Contenido de alertas climáticas estará disponible aquí.</p></div>;
-const ConsejosPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Consejos IA</h1><p>Consejos personalizados con inteligencia artificial estarán disponibles aquí.</p></div>;
-const MonitoreoPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Monitoreo</h1><p>Sistema de monitoreo de condiciones climáticas estará disponible aquí.</p></div>;
-const ComunidadPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Comunidad</h1><p>Conecte con otros agricultores de su región.</p></div>;
-const FinanciamientoPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Financiamiento</h1><p>Información sobre subsidios y créditos disponibles.</p></div>;
 const AjustesPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Ajustes</h1><p>Configure sus preferencias de la aplicación.</p></div>;
 
 const queryClient = new QueryClient();
