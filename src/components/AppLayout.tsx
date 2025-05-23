@@ -12,8 +12,8 @@ interface AppLayoutProps {
 
 const AppLayout = ({ children }: AppLayoutProps) => {
   return (
-    <SidebarProvider>
-      <div className="min-h-screen flex w-full">
+    <div className="min-h-screen flex w-full">
+      <SidebarProvider>
         <AppSidebar />
         <SidebarInset className="pb-12">
           <Header />
@@ -28,12 +28,12 @@ const AppLayout = ({ children }: AppLayoutProps) => {
             </div>
           </footer>
         </SidebarInset>
-      </div>
+      </SidebarProvider>
       
       {/* Interactive Elements */}
       <Mascot />
       <Chatbot />
-    </SidebarProvider>
+    </div>
   );
 };
 
