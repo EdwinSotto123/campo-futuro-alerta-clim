@@ -1,6 +1,6 @@
 
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -62,6 +62,20 @@ export function AppSidebar() {
     },
   ];
 
+  // Define chatbot and assistance items
+  const chatItems = [
+    { 
+      icon: Bot, 
+      label: "Asistente Virtual", 
+      path: "/asistente" 
+    },
+    { 
+      icon: HelpCircle, 
+      label: "Mascota Andina", 
+      path: "/mascota" 
+    },
+  ];
+
   // Helper function to check if a path is active
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -120,6 +134,28 @@ export function AppSidebar() {
                       className={`flex items-center ${isActive(item.path) ? 'text-agriculture-brown font-medium' : 'hover:text-agriculture-brown'}`}
                     >
                       <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-brown' : ''}`} />
+                      {!collapsed && <span>{item.label}</span>}
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* New Chatbot and assistance section */}
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-agriculture-gold font-medium">Asistencia</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {chatItems.map((item) => (
+                <SidebarMenuItem key={item.path}>
+                  <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
+                    <Link 
+                      to={item.path} 
+                      className={`flex items-center ${isActive(item.path) ? 'text-agriculture-gold font-medium' : 'hover:text-agriculture-gold'}`}
+                    >
+                      <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-gold' : ''}`} />
                       {!collapsed && <span>{item.label}</span>}
                     </Link>
                   </SidebarMenuButton>

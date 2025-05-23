@@ -15,6 +15,29 @@ import ComunidadPage from "./pages/Comunidad";
 // Create placeholder pages for routes without full implementation
 const AlertasPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Alertas Climáticas</h1><p>Contenido de alertas climáticas estará disponible aquí.</p></div>;
 const AjustesPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Ajustes</h1><p>Configure sus preferencias de la aplicación.</p></div>;
+const AsistentePage = () => {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold">Asistente Virtual</h1>
+      <p className="text-lg">Interactúa con Wara, tu asistente virtual para agricultura andina.</p>
+      <div className="p-4 bg-white rounded-lg shadow-md border border-agriculture-earth/20">
+        <p className="text-sm">Puedes comunicarte con el asistente desde cualquier página usando el botón de chat ubicado en la esquina inferior derecha de la pantalla.</p>
+      </div>
+    </div>
+  );
+};
+
+const MascotaPage = () => {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold">Mascota Andina</h1>
+      <p className="text-lg">Conoce a Agro, tu compañero virtual que te brinda consejos para la agricultura sostenible.</p>
+      <div className="p-4 bg-white rounded-lg shadow-md border border-agriculture-earth/20">
+        <p className="text-sm">Tu mascota virtual aparecerá en la esquina de la pantalla para brindarte consejos contextuales mientras navegas por la aplicación.</p>
+      </div>
+    </div>
+  );
+};
 
 const queryClient = new QueryClient();
 
@@ -30,6 +53,8 @@ const App = () => (
           <Route path="/comunidad" element={<AppLayout><ComunidadPage /></AppLayout>} />
           <Route path="/financiamiento" element={<AppLayout><FinanciamientoPage /></AppLayout>} />
           <Route path="/ajustes" element={<AppLayout><AjustesPage /></AppLayout>} />
+          <Route path="/asistente" element={<AppLayout><AsistentePage /></AppLayout>} />
+          <Route path="/mascota" element={<AppLayout><MascotaPage /></AppLayout>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Toaster />

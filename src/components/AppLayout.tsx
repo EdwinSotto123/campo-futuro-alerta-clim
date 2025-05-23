@@ -5,12 +5,19 @@ import AppSidebar from "@/components/AppSidebar";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 import AnimalAdvisor from "@/components/AnimalAdvisor";
 import VirtualAssistant from "@/components/VirtualAssistant";
+import { useLocation } from "react-router-dom";
 
 interface AppLayoutProps {
   children: ReactNode;
 }
 
 const AppLayout = ({ children }: AppLayoutProps) => {
+  const location = useLocation();
+  const path = location.pathname;
+  
+  // Only show interactive elements on main pages, not on their dedicated pages
+  const showInteractive = path !== "/asistente" && path !== "/mascota";
+  
   return (
     <div className="min-h-screen flex w-full bg-gradient-to-br from-amber-50 to-orange-50">
       <SidebarProvider>
@@ -30,9 +37,13 @@ const AppLayout = ({ children }: AppLayoutProps) => {
         </SidebarInset>
       </SidebarProvider>
       
-      {/* Interactive Elements */}
-      <AnimalAdvisor />
-      <VirtualAssistant />
+      {/* Interactive Elements - only show on main pages */}
+      {showInteractive && (
+        <>
+          <AnimalAdvisor />
+          <VirtualAssistant />
+        </>
+      )}
     </div>
   );
 };
