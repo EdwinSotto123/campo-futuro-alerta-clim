@@ -63,14 +63,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom agricultural colors
+				// Custom agricultural Andean colors
 				agriculture: {
-					green: '#22c55e',
-					darkGreen: '#15803d',
-					earth: '#a16207',
-					sky: '#0ea5e9',
-					warning: '#f59e0b',
-					danger: '#dc2626'
+					terracotta: '#D35400',
+					brown: '#A04000',
+					earth: '#C27500',
+					gold: '#F1C40F',
+					sky: '#3498DB',
+					warning: '#F39C12',
+					danger: '#E74C3C'
 				}
 			},
 			borderRadius: {
