@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Bot, User, Send, X, BookOpen, PanelLeft, MapPin, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,17 +13,19 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+interface AttachmentType {
+  type: "image" | "map" | "chart" | "link";
+  url: string;
+  title?: string;
+}
+
 interface Message {
   id: string;
   text: string;
   isBot: boolean;
   timestamp: Date;
   category?: string;
-  attachments?: {
-    type: "image" | "map" | "chart" | "link";
-    url: string;
-    title?: string;
-  }[];
+  attachments?: AttachmentType[];
 }
 
 const VirtualAssistant = () => {
@@ -49,7 +50,7 @@ const VirtualAssistant = () => {
     { text: "Analizar mi terreno con IA", category: "monitoreo" }
   ];
 
-  const botResponses = {
+  const botResponses: Record<string, { text: string; attachments: AttachmentType[] }> = {
     "clima": {
       text: "Según el análisis de IBM Watson y los datos satelitales, hay una alerta de sequía moderada para la región del Altiplano Norte durante los próximos 15 días. Te recomiendo revisar el apartado de Monitoreo para más detalles y considerar implementar riego por goteo para optimizar el uso de agua.",
       attachments: [
@@ -122,7 +123,7 @@ const VirtualAssistant = () => {
       responseCategory = "monitoreo";
     }
 
-    const response = botResponses[responseCategory as keyof typeof botResponses];
+    const response = botResponses[responseCategory];
 
     setTimeout(() => {
       const botMessage: Message = {
