@@ -1,6 +1,6 @@
 
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Menu
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -18,7 +18,6 @@ import {
   useSidebar
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 export function AppSidebar() {
   const location = useLocation();
@@ -69,17 +68,17 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar variant="inset" className="border-r">
+    <Sidebar variant="inset" className="border-r border-agriculture-terracotta/20">
       <SidebarHeader className="flex flex-col gap-4 py-4">
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2 px-2">
-            <div className="agriculture-gradient h-8 w-8 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">🌱</span>
+            <div className="bg-gradient-to-br from-agriculture-terracotta to-agriculture-earth h-8 w-8 rounded-full flex items-center justify-center">
+              <Leaf className="text-white h-5 w-5" />
             </div>
             {!collapsed && (
               <div>
                 <h3 className="font-semibold text-lg text-gradient">AgroClima</h3>
-                <p className="text-xs text-muted-foreground">Tu asistente agrícola</p>
+                <p className="text-xs text-muted-foreground">Región Andina</p>
               </div>
             )}
           </div>
@@ -87,16 +86,19 @@ export function AppSidebar() {
         </div>
       </SidebarHeader>
       <SidebarSeparator />
-      <SidebarContent>
+      <SidebarContent className="bg-gradient-to-b from-amber-50 to-orange-50">
         <SidebarGroup>
-          <SidebarGroupLabel>Principal</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-agriculture-terracotta font-medium">Principal</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.path}>
                   <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
-                    <Link to={item.path} className="flex items-center">
-                      <item.icon className="h-4 w-4 mr-2" />
+                    <Link 
+                      to={item.path} 
+                      className={`flex items-center ${isActive(item.path) ? 'text-agriculture-terracotta font-medium' : 'hover:text-agriculture-terracotta'}`}
+                    >
+                      <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-terracotta' : ''}`} />
                       {!collapsed && <span>{item.label}</span>}
                     </Link>
                   </SidebarMenuButton>
@@ -107,14 +109,17 @@ export function AppSidebar() {
         </SidebarGroup>
         
         <SidebarGroup>
-          <SidebarGroupLabel>Recursos</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-agriculture-brown font-medium">Recursos</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {resourceItems.map((item) => (
                 <SidebarMenuItem key={item.path}>
                   <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
-                    <Link to={item.path} className="flex items-center">
-                      <item.icon className="h-4 w-4 mr-2" />
+                    <Link 
+                      to={item.path} 
+                      className={`flex items-center ${isActive(item.path) ? 'text-agriculture-brown font-medium' : 'hover:text-agriculture-brown'}`}
+                    >
+                      <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-brown' : ''}`} />
                       {!collapsed && <span>{item.label}</span>}
                     </Link>
                   </SidebarMenuButton>
@@ -124,15 +129,18 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarSeparator />
+        <SidebarSeparator className="bg-agriculture-terracotta/10" />
         
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild isActive={isActive("/ajustes")} tooltip={collapsed ? "Ajustes" : undefined}>
-                  <Link to="/ajustes" className="flex items-center">
-                    <Settings className="h-4 w-4 mr-2" />
+                  <Link 
+                    to="/ajustes" 
+                    className={`flex items-center ${isActive("/ajustes") ? 'text-agriculture-gold font-medium' : 'hover:text-agriculture-gold'}`}
+                  >
+                    <Settings className={`h-4 w-4 mr-2 ${isActive("/ajustes") ? 'text-agriculture-gold' : ''}`} />
                     {!collapsed && <span>Ajustes</span>}
                   </Link>
                 </SidebarMenuButton>
