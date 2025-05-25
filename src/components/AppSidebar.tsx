@@ -1,6 +1,6 @@
 
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -62,6 +62,20 @@ export function AppSidebar() {
     },
   ];
 
+  // Define Climate Challenge items
+  const climateItems = [
+    { 
+      icon: Globe, 
+      label: "Climate Challenge", 
+      path: "/climate-challenge" 
+    },
+    { 
+      icon: TreePine, 
+      label: "IA Sostenible", 
+      path: "/ia-sostenible" 
+    },
+  ];
+
   // Define chatbot and assistance items
   const chatItems = [
     { 
@@ -92,7 +106,7 @@ export function AppSidebar() {
             {!collapsed && (
               <div>
                 <h3 className="font-semibold text-lg text-gradient">AgroClima</h3>
-                <p className="text-xs text-muted-foreground">Región Andina</p>
+                <p className="text-xs text-muted-foreground">Call for Code 2024</p>
               </div>
             )}
           </div>
@@ -113,6 +127,27 @@ export function AppSidebar() {
                       className={`flex items-center ${isActive(item.path) ? 'text-agriculture-terracotta font-medium' : 'hover:text-agriculture-terracotta'}`}
                     >
                       <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-terracotta' : ''}`} />
+                      {!collapsed && <span>{item.label}</span>}
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-green-600 font-medium">Climate Challenge</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {climateItems.map((item) => (
+                <SidebarMenuItem key={item.path}>
+                  <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
+                    <Link 
+                      to={item.path} 
+                      className={`flex items-center ${isActive(item.path) ? 'text-green-600 font-medium' : 'hover:text-green-600'}`}
+                    >
+                      <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-green-600' : ''}`} />
                       {!collapsed && <span>{item.label}</span>}
                     </Link>
                   </SidebarMenuButton>
@@ -143,9 +178,9 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        {/* New Chatbot and assistance section */}
+        {/* Chatbot and assistance section */}
         <SidebarGroup>
-          <SidebarGroupLabel className="text-agriculture-gold font-medium">Asistencia</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-agriculture-gold font-medium">Asistencia IA</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {chatItems.map((item) => (
