@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -14,6 +13,9 @@ import ComunidadPage from "./pages/Comunidad";
 import AlertasPage from "./pages/Alertas";
 import ClimateChallengePage from "./pages/ClimateChallenge";
 import IASosteniblePage from "./pages/IA-Sostenible";
+import MapaClimaticoPage from "./pages/MapaClimatico";
+import AnalisisRAGPage from "./pages/AnalisisRAG";
+import MonitoreoSatelitalPage from "./pages/MonitoreoSatelital";
 
 // Create placeholder pages for routes without full implementation
 const AjustesPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Ajustes</h1><p>Configure sus preferencias de la aplicación.</p></div>;

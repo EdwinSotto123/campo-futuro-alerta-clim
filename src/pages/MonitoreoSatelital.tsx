@@ -4,88 +4,48 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Satellite, Eye, Zap, BarChart3, MapPin, Camera, Download, Share } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Satellite, Eye, Camera, Zap, AlertTriangle, Download, Play, Pause } from "lucide-react";
 
 const MonitoreoSatelitalPage = () => {
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [selectedSatellite, setSelectedSatellite] = useState("sentinel-2");
-  
-  const satellites = [
-    {
-      id: "sentinel-2",
-      name: "Sentinel-2",
-      resolution: "10m",
-      revisit: "5 días",
-      bands: "13 bandas espectrales",
-      status: "Activo"
-    },
-    {
-      id: "landsat-8",
-      name: "Landsat-8",
-      resolution: "30m",
-      revisit: "16 días", 
-      bands: "11 bandas espectrales",
-      status: "Activo"
-    },
-    {
-      id: "modis",
-      name: "MODIS Terra/Aqua",
-      resolution: "250m-1km",
-      revisit: "1-2 días",
-      bands: "36 bandas espectrales",
-      status: "Activo"
-    }
-  ];
 
-  const indices = [
-    {
-      name: "NDVI",
-      description: "Índice de Vegetación de Diferencia Normalizada",
-      value: 0.72,
-      status: "Saludable",
-      color: "green"
-    },
-    {
-      name: "NDWI", 
-      description: "Índice de Agua de Diferencia Normalizada",
-      value: 0.45,
-      status: "Moderado",
-      color: "blue"
-    },
-    {
-      name: "LST",
-      description: "Temperatura Superficial de la Tierra",
-      value: 18.5,
-      status: "Normal",
-      color: "orange"
-    },
-    {
-      name: "NDSI",
-      description: "Índice de Nieve de Diferencia Normalizada", 
-      value: 0.12,
-      status: "Bajo",
-      color: "gray"
-    }
+  const satellites = [
+    { id: "sentinel-2", name: "Sentinel-2", resolution: "10m", frequency: "5 días" },
+    { id: "landsat-8", name: "Landsat 8", resolution: "30m", frequency: "16 días" },
+    { id: "modis", name: "MODIS", resolution: "250m", frequency: "Diario" },
+    { id: "planetscope", name: "PlanetScope", resolution: "3m", frequency: "Diario" }
   ];
 
   const analysisResults = [
     {
-      area: "Sector Norte - Cultivos de Papa",
-      health: 85,
-      trend: "↗ Mejorando",
-      recommendations: "Mantener riego actual, monitorear posible estrés hídrico en 2 semanas"
+      metric: "Índice de Vegetación (NDVI)",
+      value: "0.78",
+      status: "Saludable",
+      trend: "+5% vs mes anterior",
+      color: "text-green-600"
     },
     {
-      area: "Sector Central - Cultivos de Quinua", 
-      health: 72,
-      trend: "→ Estable",
-      recommendations: "Considerar fertilización orgánica, verificar densidad de siembra"
+      metric: "Estrés Hídrico",
+      value: "Moderado",
+      status: "Atención",
+      trend: "↑ Incrementando",
+      color: "text-yellow-600"
     },
     {
-      area: "Sector Sur - Pastizales",
-      health: 58,
-      trend: "↘ Deterioro",
-      recommendations: "Implementar rotación de pastoreo, evaluar suplementación"
+      metric: "Detección de Plagas",
+      value: "2 zonas",
+      status: "Alerta",
+      trend: "Nueva detección",
+      color: "text-red-600"
+    },
+    {
+      metric: "Estimación de Rendimiento",
+      value: "85%",
+      status: "Bueno",
+      trend: "Según proyección",
+      color: "text-blue-600"
     }
   ];
 
@@ -95,245 +55,362 @@ const MonitoreoSatelitalPage = () => {
         <div>
           <h1 className="text-3xl font-bold text-agriculture-terracotta">Monitoreo Satelital Avanzado</h1>
           <p className="text-muted-foreground">
-            Análisis multispectral con IA - ESA Copernicus + NASA Earth Data
+            Análisis multispectral con IA para agricultura de precisión - ODS 13
           </p>
         </div>
-        <Badge variant="outline" className="bg-blue-500/20 text-blue-700">
-          Sentinel-2 + Landsat + MODIS
-        </Badge>
+        <div className="flex items-center gap-2">
+          <Badge variant="outline" className="bg-green-500/20 text-green-700">
+            IBM Earth Observations
+          </Badge>
+          <Badge variant="outline" className="bg-blue-500/20 text-blue-700">
+            Watson AI
+          </Badge>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Panel de Control Satelital */}
-        <div className="lg:col-span-1 space-y-4">
+        <div className="lg:col-span-1">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg flex items-center gap-2">
-                <Satellite className="h-5 w-5 text-blue-600" />
-                Satélites Activos
+              <CardTitle className="flex items-center gap-2">
+                <Satellite className="h-5 w-5 text-agriculture-earth" />
+                Control Satelital
               </CardTitle>
+              <CardDescription>Configuración de sensores y análisis</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                {satellites.map((sat) => (
-                  <Button
-                    key={sat.id}
-                    variant={selectedSatellite === sat.id ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSelectedSatellite(sat.id)}
-                    className="w-full justify-start text-left h-auto p-3"
-                  >
-                    <div>
-                      <p className="font-medium text-xs">{sat.name}</p>
-                      <p className="text-xs opacity-70">{sat.resolution} | {sat.revisit}</p>
-                    </div>
-                  </Button>
-                ))}
+            <CardContent className="space-y-4">
+              <div>
+                <label className="text-sm font-medium">Satélite Activo</label>
+                <select 
+                  value={selectedSatellite}
+                  onChange={(e) => setSelectedSatellite(e.target.value)}
+                  className="w-full mt-1 p-2 border rounded-md"
+                >
+                  {satellites.map((sat) => (
+                    <option key={sat.id} value={sat.id}>
+                      {sat.name} - {sat.resolution}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-muted-foreground">Resolución:</span>
+                  <p className="font-medium">
+                    {satellites.find(s => s.id === selectedSatellite)?.resolution}
+                  </p>
+                </div>
+                <div>
+                  <span className="text-muted-foreground">Frecuencia:</span>
+                  <p className="font-medium">
+                    {satellites.find(s => s.id === selectedSatellite)?.frequency}
+                  </p>
+                </div>
+              </div>
+
+              <Button 
+                onClick={() => setIsAnalyzing(!isAnalyzing)}
+                className="w-full"
+                variant={isAnalyzing ? "secondary" : "default"}
+              >
+                {isAnalyzing ? (
+                  <>
+                    <Pause className="h-4 w-4 mr-2" />
+                    Pausar Análisis
+                  </>
+                ) : (
+                  <>
+                    <Play className="h-4 w-4 mr-2" />
+                    Iniciar Análisis IA
+                  </>
+                )}
+              </Button>
+
+              <div className="space-y-2">
+                <h4 className="font-medium text-sm">Bandas Espectrales Activas:</h4>
+                <div className="grid grid-cols-2 gap-1 text-xs">
+                  <Badge variant="outline">RGB</Badge>
+                  <Badge variant="outline">NIR</Badge>
+                  <Badge variant="outline">SWIR</Badge>
+                  <Badge variant="outline">Térmica</Badge>
+                </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="mt-4">
             <CardHeader>
-              <CardTitle className="text-lg">Índices Espectrales</CardTitle>
+              <CardTitle className="text-lg">Resultados del Análisis IA</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                {indices.map((index, idx) => (
-                  <div key={idx} className="space-y-1">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium">{index.name}</span>
-                      <Badge variant="outline" className="text-xs">
-                        {typeof index.value === 'number' ? 
-                          (index.name === 'LST' ? `${index.value}°C` : index.value.toFixed(2)) : 
-                          index.value}
-                      </Badge>
-                    </div>
-                    <Progress 
-                      value={index.name === 'LST' ? (index.value / 30) * 100 : index.value * 100} 
-                      className="h-2"
-                    />
-                    <p className="text-xs text-muted-foreground">{index.description}</p>
+            <CardContent className="space-y-4">
+              {analysisResults.map((result, index) => (
+                <div key={index} className="p-3 rounded-md bg-muted/50">
+                  <div className="flex items-center justify-between mb-1">
+                    <p className="font-medium text-sm">{result.metric}</p>
+                    <Badge variant="outline" className={result.color}>
+                      {result.status}
+                    </Badge>
                   </div>
-                ))}
-              </div>
+                  <p className="text-lg font-bold">{result.value}</p>
+                  <p className="text-xs text-muted-foreground">{result.trend}</p>
+                </div>
+              ))}
             </CardContent>
           </Card>
         </div>
 
-        {/* Visualización Principal */}
-        <div className="lg:col-span-3 space-y-4">
+        {/* Visualización Satelital */}
+        <div className="lg:col-span-2">
           <Card>
             <CardHeader>
               <div className="flex items-center justify-between">
                 <CardTitle className="flex items-center gap-2">
                   <Eye className="h-5 w-5 text-agriculture-earth" />
-                  Imagen Satelital Multispectral
+                  Vista Satelital Multispectral
                 </CardTitle>
-                <div className="flex gap-2">
+                <div className="flex items-center gap-2">
                   <Button size="sm" variant="outline">
                     <Download className="h-4 w-4 mr-2" />
-                    Descargar
+                    Exportar
                   </Button>
                   <Button size="sm" variant="outline">
-                    <Share className="h-4 w-4 mr-2" />
-                    Compartir
+                    <Camera className="h-4 w-4 mr-2" />
+                    Captura
                   </Button>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-green-200 via-yellow-200 to-brown-200 rounded-lg h-96 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-black/10 rounded-lg" />
-                  
-                  {/* Simulación de análisis de cultivos */}
-                  <div className="absolute top-4 left-4 bg-white/90 p-2 rounded-md text-xs">
-                    <p className="font-medium">Sentinel-2 MSI</p>
-                    <p>Fecha: 2024-12-25</p>
-                    <p>Resolución: 10m</p>
-                  </div>
-                  
-                  {/* Áreas de análisis */}
-                  <div className="absolute top-20 left-32 w-16 h-12 border-2 border-green-500 bg-green-500/20 rounded">
-                    <div className="bg-green-500 text-white text-xs p-1 rounded-t">Zona A</div>
-                  </div>
-                  <div className="absolute top-40 right-24 w-20 h-16 border-2 border-yellow-500 bg-yellow-500/20 rounded">
-                    <div className="bg-yellow-500 text-white text-xs p-1 rounded-t">Zona B</div>
-                  </div>
-                  <div className="absolute bottom-28 left-20 w-18 h-14 border-2 border-red-500 bg-red-500/20 rounded">
-                    <div className="bg-red-500 text-white text-xs p-1 rounded-t">Zona C</div>
-                  </div>
-                  
-                  <div className="text-center z-10">
-                    <Camera className="h-12 w-12 mx-auto mb-2 text-agriculture-earth" />
-                    <p className="text-lg font-medium">Vista Multispectral</p>
-                    <p className="text-sm text-muted-foreground">Análisis RGB + NIR + SWIR</p>
+              <div className="bg-gradient-to-br from-green-200 via-yellow-100 to-brown-200 rounded-lg h-96 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-black/10 rounded-lg" />
+                
+                {/* Simulación de vista satelital con overlays */}
+                <div className="absolute top-4 left-4 space-y-2">
+                  <div className="bg-white/90 p-2 rounded-md text-xs">
+                    <p className="font-medium">Coordenadas: -13.5319, -71.9675</p>
+                    <p>Fecha: {new Date().toLocaleDateString()}</p>
+                    <p>Resolución: {satellites.find(s => s.id === selectedSatellite)?.resolution}</p>
                   </div>
                 </div>
-                
-                <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-2">
-                  <Button size="sm" variant="outline">RGB Natural</Button>
-                  <Button size="sm" variant="outline">Falso Color</Button>
-                  <Button size="sm" variant="outline">NDVI</Button>
-                  <Button size="sm" variant="outline">Análisis Térmal</Button>
+
+                {/* Marcadores de análisis */}
+                <div className="absolute top-20 left-32 w-4 h-4 bg-green-500 rounded-full animate-pulse border-2 border-white" />
+                <div className="absolute top-40 right-24 w-4 h-4 bg-yellow-500 rounded-full animate-pulse border-2 border-white" />
+                <div className="absolute bottom-28 left-20 w-4 h-4 bg-red-500 rounded-full animate-pulse border-2 border-white" />
+
+                <div className="text-center z-10">
+                  <p className="text-lg font-medium mb-2">Análisis Multispectral en Tiempo Real</p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Procesamiento con Watson AI y Sentinel-2
+                  </p>
+                  {isAnalyzing && (
+                    <div className="flex items-center justify-center gap-2">
+                      <Zap className="h-4 w-4 text-yellow-500 animate-pulse" />
+                      <span className="text-sm">Analizando con IA...</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="mt-4 grid grid-cols-4 gap-2">
+                <Button variant="outline" size="sm">RGB Natural</Button>
+                <Button variant="outline" size="sm">Falso Color</Button>
+                <Button variant="outline" size="sm">NDVI</Button>
+                <Button variant="outline" size="sm">Térmica</Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+
+      <Tabs defaultValue="analisis" className="w-full">
+        <TabsList className="grid grid-cols-4 w-full">
+          <TabsTrigger value="analisis">Análisis Temporal</TabsTrigger>
+          <TabsTrigger value="alertas">Alertas Automáticas</TabsTrigger>
+          <TabsTrigger value="reportes">Reportes IA</TabsTrigger>
+          <TabsTrigger value="integracion">Integración APIs</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="analisis" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">Evolución Temporal NDVI</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="h-48 bg-gradient-to-r from-red-200 via-yellow-200 to-green-200 rounded-md mb-2 flex items-center justify-center">
+                  <p className="text-sm font-medium">Gráfico Temporal - Últimos 12 meses</p>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Tendencia: Mejora gradual del 15% en salud vegetal
+                </p>
+              </CardContent>
+            </Card>
+            
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-base">Análisis de Cambios</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Deforestación detectada</span>
+                    <Badge variant="destructive">0.2 ha</Badge>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Nuevas áreas cultivadas</span>
+                    <Badge variant="default">1.5 ha</Badge>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Estrés hídrico</span>
+                    <Badge variant="warning">Moderado</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="alertas" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Sistema de Alertas Automáticas</CardTitle>
+              <CardDescription>Detección temprana con IA para prevención de riesgos</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="p-4 bg-red-50 border-l-4 border-red-500 rounded-r-md">
+                  <div className="flex items-center gap-2">
+                    <AlertTriangle className="h-5 w-5 text-red-600" />
+                    <p className="font-medium text-red-800">Alerta Crítica - Plaga Detectada</p>
+                  </div>
+                  <p className="text-sm text-red-600 mt-1">
+                    Zona norte muestra signos de infestación. Se recomienda intervención inmediata.
+                  </p>
+                  <p className="text-xs text-red-500 mt-2">Detectado hace 15 minutos</p>
+                </div>
+
+                <div className="p-4 bg-yellow-50 border-l-4 border-yellow-500 rounded-r-md">
+                  <div className="flex items-center gap-2">
+                    <AlertTriangle className="h-5 w-5 text-yellow-600" />
+                    <p className="font-medium text-yellow-800">Alerta Moderada - Estrés Hídrico</p>
+                  </div>
+                  <p className="text-sm text-yellow-600 mt-1">
+                    Niveles de humedad del suelo por debajo del óptimo en sector este.
+                  </p>
+                  <p className="text-xs text-yellow-500 mt-2">Detectado hace 2 horas</p>
+                </div>
+
+                <div className="p-4 bg-blue-50 border-l-4 border-blue-500 rounded-r-md">
+                  <div className="flex items-center gap-2">
+                    <Eye className="h-5 w-5 text-blue-600" />
+                    <p className="font-medium text-blue-800">Información - Condiciones Óptimas</p>
+                  </div>
+                  <p className="text-sm text-blue-600 mt-1">
+                    Sector sur mantiene condiciones ideales para crecimiento.
+                  </p>
+                  <p className="text-xs text-blue-500 mt-2">Actualizado hace 30 minutos</p>
                 </div>
               </div>
             </CardContent>
           </Card>
+        </TabsContent>
 
-          <Tabs defaultValue="analisis" className="w-full">
-            <TabsList className="grid grid-cols-4 w-full">
-              <TabsTrigger value="analisis">Análisis IA</TabsTrigger>
-              <TabsTrigger value="temporal">Series Temporales</TabsTrigger>
-              <TabsTrigger value="comparacion">Comparación</TabsTrigger>
-              <TabsTrigger value="alertas">Alertas Automáticas</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="analisis" className="space-y-4">
-              <div className="grid gap-4">
-                {analysisResults.map((result, index) => (
-                  <Card key={index}>
-                    <CardHeader>
-                      <div className="flex items-center justify-between">
-                        <CardTitle className="text-base">{result.area}</CardTitle>
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm text-muted-foreground">{result.trend}</span>
-                          <Badge variant={result.health > 80 ? "default" : result.health > 60 ? "secondary" : "destructive"}>
-                            {result.health}% Salud
-                          </Badge>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        <Progress value={result.health} className="h-2" />
-                        <div className="p-3 bg-blue-50 rounded-md">
-                          <h4 className="text-sm font-medium mb-1">Recomendaciones IA:</h4>
-                          <p className="text-sm text-blue-800">{result.recommendations}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="temporal" className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Evolución Temporal de Cultivos</CardTitle>
-                  <CardDescription>Análisis de cambios en los últimos 6 meses</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="h-64 bg-gradient-to-r from-agriculture-earth/10 to-agriculture-sky/10 rounded-md flex items-center justify-center">
-                    <div className="text-center">
-                      <BarChart3 className="h-12 w-12 mx-auto mb-2 text-agriculture-earth" />
-                      <p className="text-lg font-medium">Gráfico Temporal NDVI</p>
-                      <p className="text-sm text-muted-foreground">Integración con Recharts</p>
+        <TabsContent value="reportes" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Reportes Inteligentes Generados por IA</CardTitle>
+              <CardDescription>Análisis automatizado con recomendaciones personalizadas</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-md">
+                  <h4 className="font-medium text-green-800 mb-2">Reporte Semanal - Salud de Cultivos</h4>
+                  <p className="text-sm text-green-600 mb-3">
+                    Los análisis satelitales muestran una mejora del 12% en la salud general de los cultivos comparado con la semana anterior.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-xs">
+                    <div>
+                      <span className="font-medium">NDVI Promedio:</span> 0.78 (+0.05)
+                    </div>
+                    <div>
+                      <span className="font-medium">Área Saludable:</span> 85% (+8%)
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+                  <Button size="sm" className="mt-2">Descargar Reporte Completo</Button>
+                </div>
 
-            <TabsContent value="comparacion" className="space-y-4">
+                <div className="p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-md">
+                  <h4 className="font-medium text-orange-800 mb-2">Recomendaciones IA</h4>
+                  <ul className="text-sm text-orange-600 space-y-1">
+                    <li>• Incrementar riego en sectores con NDVI &lt; 0.6</li>
+                    <li>• Aplicar fertilizante foliar en zona norte</li>
+                    <li>• Monitorear desarrollo de plagas en sector identificado</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="integracion" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>Integración con APIs Externas</CardTitle>
+              <CardDescription>Conexiones activas con proveedores de datos satelitales</CardDescription>
+            </CardHeader>
+            <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-base">Enero 2024</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="h-32 bg-gradient-to-br from-green-300 to-green-500 rounded-md mb-2" />
-                    <p className="text-xs text-muted-foreground">NDVI Promedio: 0.68</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="text-base">Diciembre 2024</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-md mb-2" />
-                    <p className="text-xs text-muted-foreground">NDVI Promedio: 0.72 (+6%)</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="alertas" className="space-y-4">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Zap className="h-5 w-5 text-yellow-600" />
-                    Sistema de Alertas Automáticas
-                  </CardTitle>
-                  <CardDescription>Detección de anomalías usando Machine Learning</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="p-4 bg-yellow-50 rounded-md border-l-4 border-yellow-500">
-                        <h4 className="font-medium text-yellow-800">Estrés Hídrico Detectado</h4>
-                        <p className="text-sm text-yellow-700 mt-1">
-                          Sector Norte muestra signos de déficit hídrico (NDWI < 0.3)
-                        </p>
-                        <Button size="sm" className="mt-2">Ver Detalles</Button>
-                      </div>
-                      <div className="p-4 bg-green-50 rounded-md border-l-4 border-green-500">
-                        <h4 className="font-medium text-green-800">Crecimiento Óptimo</h4>
-                        <p className="text-sm text-green-700 mt-1">
-                          Sector Central presenta excelente desarrollo vegetativo
-                        </p>
-                        <Button size="sm" className="mt-2">Ver Detalles</Button>
-                      </div>
-                    </div>
+                <div className="p-4 border rounded-md">
+                  <h4 className="font-medium mb-2">IBM Environmental Intelligence</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-green-600">Conectado</span>
                   </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </div>
+                  <p className="text-xs text-muted-foreground">
+                    Acceso a datos meteorológicos y alertas climáticas en tiempo real
+                  </p>
+                </div>
+
+                <div className="p-4 border rounded-md">
+                  <h4 className="font-medium mb-2">ESA Copernicus</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-green-600">Conectado</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Imágenes Sentinel-1 y Sentinel-2 para análisis multispectral
+                  </p>
+                </div>
+
+                <div className="p-4 border rounded-md">
+                  <h4 className="font-medium mb-2">NASA MODIS</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-green-600">Conectado</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Datos de temperatura superficial y índices de vegetación globales
+                  </p>
+                </div>
+
+                <div className="p-4 border rounded-md">
+                  <h4 className="font-medium mb-2">Planet Labs</h4>
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                    <span className="text-sm text-yellow-600">Configurando</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Imágenes de alta resolución diarias para monitoreo detallado
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 };
