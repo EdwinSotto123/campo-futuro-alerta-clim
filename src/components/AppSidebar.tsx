@@ -1,6 +1,6 @@
 
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite, Shield, AlertTriangle
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite, Shield, AlertTriangle, Sprout
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -30,6 +30,11 @@ export function AppSidebar() {
       icon: Home, 
       label: "Inicio", 
       path: "/" 
+    },
+    { 
+      icon: Sprout, 
+      label: "Mi Parcela", 
+      path: "/mi-parcela" 
     },
     { 
       icon: CloudRain, 

@@ -18,6 +18,7 @@ import AnalisisRAGPage from "./pages/AnalisisRAG";
 import MonitoreoSatelitalPage from "./pages/MonitoreoSatelital";
 import PlanesAccionPage from "./pages/PlanesAccion";
 import CentroEmergenciasPage from "./pages/CentroEmergencias";
+import MiParcelaPage from "./pages/MiParcela";
 
 // Create placeholder pages for routes without full implementation
 const AjustesPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Ajustes</h1><p>Configure sus preferencias de la aplicación.</p></div>;
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/monitoreo" element={<AppLayout><MonitoreoPage /></AppLayout>} />
           <Route path="/comunidad" element={<AppLayout><ComunidadPage /></AppLayout>} />
           <Route path="/financiamiento" element={<AppLayout><FinanciamientoPage /></AppLayout>} />
+          <Route path="/mi-parcela" element={<AppLayout><MiParcelaPage /></AppLayout>} />
           <Route path="/climate-challenge" element={<AppLayout><ClimateChallengePage /></AppLayout>} />
           <Route path="/ia-sostenible" element={<AppLayout><IASosteniblePage /></AppLayout>} />
           <Route path="/mapa-climatico" element={<AppLayout><MapaClimaticoPage /></AppLayout>} />
