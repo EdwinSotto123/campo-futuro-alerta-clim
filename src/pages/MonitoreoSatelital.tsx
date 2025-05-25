@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -265,7 +264,7 @@ const MonitoreoSatelitalPage = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm">Estrés hídrico</span>
-                    <Badge variant="warning">Moderado</Badge>
+                    <Badge variant="secondary">Moderado</Badge>
                   </div>
                 </div>
               </CardContent>
