@@ -56,6 +56,9 @@ const App = () => (
           <Route path="/financiamiento" element={<AppLayout><FinanciamientoPage /></AppLayout>} />
           <Route path="/climate-challenge" element={<AppLayout><ClimateChallengePage /></AppLayout>} />
           <Route path="/ia-sostenible" element={<AppLayout><IASosteniblePage /></AppLayout>} />
+          <Route path="/mapa-climatico" element={<AppLayout><MapaClimaticoPage /></AppLayout>} />
+          <Route path="/analisis-rag" element={<AppLayout><AnalisisRAGPage /></AppLayout>} />
+          <Route path="/monitoreo-satelital" element={<AppLayout><MonitoreoSatelitalPage /></AppLayout>} />
           <Route path="/ajustes" element={<AppLayout><AjustesPage /></AppLayout>} />
           <Route path="/asistente" element={<AppLayout><AsistentePage /></AppLayout>} />
           <Route path="/mascota" element={<AppLayout><MascotaPage /></AppLayout>} />

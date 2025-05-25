@@ -1,6 +1,6 @@
 
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -62,7 +62,7 @@ export function AppSidebar() {
     },
   ];
 
-  // Define Climate Challenge items
+  // Define Climate Challenge items with advanced features
   const climateItems = [
     { 
       icon: Globe, 
@@ -73,6 +73,21 @@ export function AppSidebar() {
       icon: TreePine, 
       label: "IA Sostenible", 
       path: "/ia-sostenible" 
+    },
+    { 
+      icon: Map, 
+      label: "Mapa Climático", 
+      path: "/mapa-climatico" 
+    },
+    { 
+      icon: Brain, 
+      label: "Análisis RAG", 
+      path: "/analisis-rag" 
+    },
+    { 
+      icon: Satellite, 
+      label: "Monitoreo Satelital", 
+      path: "/monitoreo-satelital" 
     },
   ];
 
@@ -137,7 +152,7 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel className="text-green-600 font-medium">Climate Challenge</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-green-600 font-medium">Climate Challenge - ODS 13</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {climateItems.map((item) => (
