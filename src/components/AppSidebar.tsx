@@ -1,6 +1,6 @@
 
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite, Shield, AlertTriangle
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -88,6 +88,16 @@ export function AppSidebar() {
       icon: Satellite, 
       label: "Monitoreo Satelital", 
       path: "/monitoreo-satelital" 
+    },
+    { 
+      icon: Shield, 
+      label: "Planes de Acción", 
+      path: "/planes-accion" 
+    },
+    { 
+      icon: AlertTriangle, 
+      label: "Centro de Emergencias", 
+      path: "/centro-emergencias" 
     },
   ];
 

@@ -16,6 +16,8 @@ import IASosteniblePage from "./pages/IA-Sostenible";
 import MapaClimaticoPage from "./pages/MapaClimatico";
 import AnalisisRAGPage from "./pages/AnalisisRAG";
 import MonitoreoSatelitalPage from "./pages/MonitoreoSatelital";
+import PlanesAccionPage from "./pages/PlanesAccion";
+import CentroEmergenciasPage from "./pages/CentroEmergencias";
 
 // Create placeholder pages for routes without full implementation
 const AjustesPage = () => <div className="space-y-6"><h1 className="text-3xl font-bold">Ajustes</h1><p>Configure sus preferencias de la aplicación.</p></div>;
@@ -61,6 +63,8 @@ const App = () => (
           <Route path="/mapa-climatico" element={<AppLayout><MapaClimaticoPage /></AppLayout>} />
           <Route path="/analisis-rag" element={<AppLayout><AnalisisRAGPage /></AppLayout>} />
           <Route path="/monitoreo-satelital" element={<AppLayout><MonitoreoSatelitalPage /></AppLayout>} />
+          <Route path="/planes-accion" element={<AppLayout><PlanesAccionPage /></AppLayout>} />
+          <Route path="/centro-emergencias" element={<AppLayout><CentroEmergenciasPage /></AppLayout>} />
           <Route path="/ajustes" element={<AppLayout><AjustesPage /></AppLayout>} />
           <Route path="/asistente" element={<AppLayout><AsistentePage /></AppLayout>} />
           <Route path="/mascota" element={<AppLayout><MascotaPage /></AppLayout>} />
