@@ -1,11 +1,12 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { ResponsiveContainer, LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, AreaChart, Area, PieChart, Pie, Cell } from "recharts";
-import { CloudRain, Droplets, Flame, Thermometer } from "lucide-react";
+import { CloudRain, Droplets, Flame, Thermometer, LayoutDashboard, Brain } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import WeatherDashboard from "@/components/WeatherDashboard";
+import AIAdvisorDashboard from "@/components/AIAdvisorDashboard";
 
 // Datos simulados - estos serían reemplazados con datos reales de una API
 const climaData = [
@@ -36,7 +37,7 @@ const estresHidricoData = [
 const COLORS = ['#36A2EB', '#FF6384', '#FFCE56', '#E74C3C'];
 
 const MonitoreoPage = () => {
-  const [selectedTab, setSelectedTab] = useState("clima");
+  const [selectedTab, setSelectedTab] = useState("dashboard");
   
   return (
     <div className="space-y-6">
@@ -53,7 +54,15 @@ const MonitoreoPage = () => {
       </div>
 
       <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
-        <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full">
+        <TabsList className="grid grid-cols-2 md:grid-cols-6 w-full">
+          <TabsTrigger value="dashboard" className="flex items-center gap-2">
+            <LayoutDashboard className="h-4 w-4" />
+            <span>Dashboard</span>
+          </TabsTrigger>
+          <TabsTrigger value="ia-advisor" className="flex items-center gap-2">
+            <Brain className="h-4 w-4" />
+            <span>IA Advisor</span>
+          </TabsTrigger>
           <TabsTrigger value="clima" className="flex items-center gap-2">
             <Thermometer className="h-4 w-4" />
             <span>Clima</span>
@@ -71,6 +80,14 @@ const MonitoreoPage = () => {
             <span>Predicciones</span>
           </TabsTrigger>
         </TabsList>
+        
+        <TabsContent value="dashboard" className="space-y-6 pt-4">
+          <WeatherDashboard />
+        </TabsContent>
+        
+        <TabsContent value="ia-advisor" className="space-y-6 pt-4">
+          <AIAdvisorDashboard />
+        </TabsContent>
         
         <TabsContent value="clima" className="space-y-6 pt-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
