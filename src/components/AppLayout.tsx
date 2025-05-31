@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 import Header from "@/components/Header";
 import AppSidebar from "@/components/AppSidebar";
@@ -11,6 +10,8 @@ interface AppLayoutProps {
   children: ReactNode;
 }
 
+
+
 const AppLayout = ({ children }: AppLayoutProps) => {
   const location = useLocation();
   const path = location.pathname;
@@ -19,7 +20,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
   const showInteractive = path !== "/asistente" && path !== "/mascota";
   
   return (
-    <div className="min-h-screen flex w-full bg-gradient-to-br from-amber-50 to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
       <SidebarProvider>
         <AppSidebar />
         <SidebarInset className="pb-12">

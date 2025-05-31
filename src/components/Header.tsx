@@ -1,9 +1,13 @@
-
 import { Bell, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
+  // Usar el contexto de idioma
+  const { language, setLanguage } = useLanguage();
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4">
@@ -20,6 +24,12 @@ const Header = () => {
 
         {/* Actions */}
         <div className="flex items-center space-x-2">
+          {/* Selector de idioma */}
+          <LanguageSelector 
+            currentLanguage={language} 
+            onLanguageChange={setLanguage} 
+          />
+          
           <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-5 w-5" />
             <span className="absolute -top-1 -right-1 h-3 w-3 bg-agriculture-danger rounded-full animate-pulse-glow"></span>

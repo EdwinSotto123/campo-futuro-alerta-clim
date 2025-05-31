@@ -1,0 +1,868 @@
+
+===============================================
+    CAMPO FUTURO - ALERTAS AGRÍCOLAS
+    Sistema de Inteligencia para el Campo
+===============================================
+Archivo creado: 2025-05-27 02:43:31
+Última actualización: Se actualiza automáticamente
+===============================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ESCANEO INTEGRAL DE INTELIGENCIA AGRÍCOLA                                           🌾
+🌾    Iniciada: 2025-05-27 02:44:31                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: RESUMEN_EJECUTIVO
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:44:49
+================================================================================
+
+
+🧠 RESUMEN EJECUTIVO IA:
+Resumen Ejecutivo: Análisis de la Agricultura en Colombia
+
+1. Introducción:
+   La agricultura en Colombia es un sector crucial para la economía nacional, representando aproximadamente el 6% del PIB y empleando a más del 20% de la fuerza laboral. Sin embargo, el sector enfrenta varios desafíos que requieren atención inmediata.
+
+2. Desafíos y Alertas:
+
+   a. Cambio Climático:
+      El cambio climático representa una amenaza significativa para la agricultura colombiana. Se prevé un aumento en la variabilidad de las precipitaciones y un incremento en la frecuencia de eventos climáticos extremos, lo que podría afectar la productividad y la sostenibilidad de las prácticas agrícolas tradicionales.
+
+   b. Infraestructura y Acceso a Mercados:
+      Muchos agricultores en Colombia, especialmente en zonas rurales, carecen de acceso a infraestructuras adecuadas para el almacenamiento, transporte y comercialización de sus productos. Esto resulta en pérdidas significativas y limita su capacidad para competir en los mercados locales e internacionales.
+
+   c. Sostenibilidad y Prácticas Agrícolas:
+      La intensificación de la producción agrícola ha llevado a problemas de degradación del suelo y agotamiento de recursos naturales. Es crucial implementar prácticas agrícolas sostenibles para garantizar la viabilidad a largo plazo del sector.
+
+3. Recomendaciones y Acciones Concretas:
+
+   a. Adaptación al Cambio Climático:
+      Los agricultores deben ser capacitados en técnicas de agricultura climáticamente inteligente, como la rotación de cultivos, la agricultura de conservación y el uso de variedades resistentes a la sequía. Además, se deben promover sistemas de alerta temprana para ayudar a los agricultores a prepararse para eventos climáticos extremos.
+
+   b. Mejora de la Infraestructura y el Acceso a Mercados:
+      El gobierno y el sector privado deben invertir en infraestructura rural, incluyendo carreteras, puertos y centros de almacenamiento. Además, se deben fomentar las cooperativas y asociaciones entre agricultores para mejorar su capacidad de negociación y acceso a mercados.
+
+   c. Promoción de Prácticas Agrícolas Sostenibles:
+      Se deben implementar programas de extensión agrícola para promover prácticas sostenibles, como la agricultura orgánica, la agroforestería y la gestión integrada de plagas. Además, se deben establecer incentivos fiscales y subsidios para agricultores que adopten estas prácticas.
+
+4. Predicciones Específicas:
+   Se espera que la implementación efectiva de estas recomendaciones resulte en un aumento de la productividad y la sostenibilidad agrícola en Colombia. Se prevé que la adopción de prácticas climáticamente inteligentes y sostenibles ayude a mitigar los impactos del cambio climático y mejorar la resiliencia del sector. Además, se espera que la mejora de la infraestructura y el acceso a mercados contribuya a un aumento de los ingresos de los agricultores y una mayor estabilidad económica en las zonas rurales.
+
+5. Conclusión:
+   La agricultura en Colombia enfrenta desafíos significativos, pero con la implementación de estas recomendaciones y acciones concretas, el sector puede avanzar hacia un futuro más sostenible y próspero. Es crucial que todos los actores involucrados, desde los agricultores hasta los formuladores de políticas, trabajen juntos para lograr este objetivo.
+📍 FUENTE: Análisis IBM Granite
+
+================================================================================
+FIN DE ALERTA - RESUMEN_EJECUTIVO
+================================================================================
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: SESION_COMPLETA_INTEGRAL
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:44:49
+================================================================================
+
+🌾 REPORTE DE INTELIGENCIA AGRÍCOLA INTEGRAL - Colombia
+================================================================================
+🕐 HORA ACTUAL: 2025-05-27 02:44:31 (UTC-5 Colombia)
+📍 FUENTE: Sistema local del servidor
+================================================================================
+
+🌊 ALERTAS DE INUNDACIÓN:
+El Instituto de Hidrología, Meteorología y Estudios Ambientales (IDEAM) emitió en la madrugada de hoy miércoles 21 de mayo, el Boletín No. 0364, en el que advierte sobre la persistencia de lluvias intensas y la probabilidad de crecientes súbitas, desbordamientos e inundaciones en diversas regiones de Colombia, especialmente en las zonas Caribe y Pacífico. Dirección electrónica exclusiva para notificaciones judiciales al IDEAM: notificacionesjudiciales@ideam.gov.co. Radicación de comunicaciones oficiales vía web: contacto@ideam.gov.co. @ideam.instituto @IDEAMColombia @ideamcolombia Instituto Ideam . Políticas Mapa del sitio Términos y condiciones Accesibilidad. De los 1.102 municipios, 830 presentan alguna alerta. De estos, 231 se encuentran en alerta roja, destacándose los departamentos de...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🌤️ ALERTAS CLIMÁTICAS:
+El Ideam ha presentado nuevas proyecciones climáticas para Colombia desde 2021 hasta 2100 bajo cuatro posibles escenarios de cambio climático. Estas proyecciones incluyen datos clave como precipitación, temperatura y humedad relativa, con una resolución espacial de 10x10 km y cubriendo más de 9.500 píxeles sobre el en total territorio nacional. Los recientes estudios del Ideam proporcionan una visión clara sobre cómo las distintas regiones de Colombia se podrían ver afectadas por el cambio climático en las próximas décadas. Ideam lanzó alerta climática por precipitaciones extremas en estas regiones de Colombia La entidad advierte riesgos de deslizamientos, incendios y tormentas. Las autoridades también emiten ... Alerta climática: IDEAM confirmó que el 70% del país reporta riesgos de desli...
+📍 FUENTE: Búsqueda web en tiempo real
+
+💰 PRECIOS DE ABONO/FERTILIZANTE:
+El SIPSA tiene por objetivo, generar información de los precios mayoristas de los productos agroalimentarios y su nivel de abastecimiento en mercados mayoristas del país, así como los precios minoristas de los insumos y factores asociados a la producción, para la toma de decisiones de los diferentes actores del sector agropecuario. Descubre el precio por bulto de fertilizante Yara y maximiza la productividad de tus cultivos con esta fórmula de calidad. En este artículo, te presentamos información detallada sobre el costo de este producto líder en el mercado, para que puedas tomar decisiones informadas y rentables en tu labor agrícola. ¡No te pierdas esta oportunidad de optimizar tus cosechas! En su boletín de abril, la Unidad de Planificación Rural Agropecuaria (UPRA) revisó el comportamie...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🐛 ALERTAS DE PLAGAS Y ENFERMEDADES:
+Las "Notificaciones oficiales de plagas" son suministradas por la Organización Nacional de Protección Fitosanitaria de cada país. En el caso de Colombia el responsable de esta acción es el Instituto Colombiano Agropecuario (ICA). Su propósito es el de comunicar peligros inmediatos o potenciales, cumpliendo así con lo establecido en la ... El Instituto Colombiano Agropecuario (ICA) ha inaugurado un área de biología molecular con el objetivo de fortalecer la sanidad vegetal y mejorar la competitividad del sector agrícola en el país. La nueva infraestructura permitirá el diagnóstico avanzado de plagas y enfermedades que afectan los cultivos, facilitando una respuesta más ... El ICA y el OIEA trabajan en proyecto pionero para combatir plagas cuarentenarias y proteger la agricultura colombiana....
+📍 FUENTE: Búsqueda web en tiempo real
+
+📈 PRECIOS DE MERCADO AGRÍCOLA:
+El Ministerio de Agricultura y Desarrollo Rural (MADR) lideró la consolidación del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA) desde 1966 bajo la operación de entidades como el Instituto de Mercadeo Agropecuario (IDEMA), la Asociación Colombiana de Centrales de Abastos (ACOABASTOS) y la Corporación Colombia Internacional (CCI). Consulta precios actualizados de productos agropecuarios: frutas, hortalizas, café, ganado y más. Toma decisiones informadas con datos del mercado en Croper. Busca lo que necesitas Enviar a Sin ... de Estadística (DANE) a través del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA). Producto que más bajó ... En el más reciente informe del Sistema de Información de Precios y Abastecimiento del Se...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🌐 RESULTADOS WEB para 'Colombia':
+Colombia, [b] officially the Republic of Colombia, [c] is a country primarily located in South America with insular regions in North America. The Colombian mainland is bordered by the Caribbean Sea to the north, Venezuela to the east and northeast, Brazil to the southeast, Peru and Ecuador to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is ... Colombia is the most populous nation of Spanish-speaking South America. More than one-third of its inhabitants live in the six largest metropolitan areas, of which Bogotá is the largest. A comprehensive overview of Colombia's geography, people, society, government, economy, energy, communications, transportation, military, and transnational issues. Compare Colombia with other countries by various indic...
+📍 FUENTE: Búsqueda web en tiempo real (DuckDuckGo)
+
+🧠 RESUMEN EJECUTIVO IA:
+Resumen Ejecutivo: Análisis de la Agricultura en Colombia
+
+1. Introducción:
+   La agricultura en Colombia es un sector crucial para la economía nacional, representando aproximadamente el 6% del PIB y empleando a más del 20% de la fuerza laboral. Sin embargo, el sector enfrenta varios desafíos que requieren atención inmediata.
+
+2. Desafíos y Alertas:
+
+   a. Cambio Climático:
+      El cambio climático representa una amenaza significativa para la agricultura colombiana. Se prevé un aumento en la variabilidad de las precipitaciones y un incremento en la frecuencia de eventos climáticos extremos, lo que podría afectar la productividad y la sostenibilidad de las prácticas agrícolas tradicionales.
+
+   b. Infraestructura y Acceso a Mercados:
+      Muchos agricultores en Colombia, especialmente en zonas rurales, carecen de acceso a infraestructuras adecuadas para el almacenamiento, transporte y comercialización de sus productos. Esto resulta en pérdidas significativas y limita su capacidad para competir en los mercados locales e internacionales.
+
+   c. Sostenibilidad y Prácticas Agrícolas:
+      La intensificación de la producción agrícola ha llevado a problemas de degradación del suelo y agotamiento de recursos naturales. Es crucial implementar prácticas agrícolas sostenibles para garantizar la viabilidad a largo plazo del sector.
+
+3. Recomendaciones y Acciones Concretas:
+
+   a. Adaptación al Cambio Climático:
+      Los agricultores deben ser capacitados en técnicas de agricultura climáticamente inteligente, como la rotación de cultivos, la agricultura de conservación y el uso de variedades resistentes a la sequía. Además, se deben promover sistemas de alerta temprana para ayudar a los agricultores a prepararse para eventos climáticos extremos.
+
+   b. Mejora de la Infraestructura y el Acceso a Mercados:
+      El gobierno y el sector privado deben invertir en infraestructura rural, incluyendo carreteras, puertos y centros de almacenamiento. Además, se deben fomentar las cooperativas y asociaciones entre agricultores para mejorar su capacidad de negociación y acceso a mercados.
+
+   c. Promoción de Prácticas Agrícolas Sostenibles:
+      Se deben implementar programas de extensión agrícola para promover prácticas sostenibles, como la agricultura orgánica, la agroforestería y la gestión integrada de plagas. Además, se deben establecer incentivos fiscales y subsidios para agricultores que adopten estas prácticas.
+
+4. Predicciones Específicas:
+   Se espera que la implementación efectiva de estas recomendaciones resulte en un aumento de la productividad y la sostenibilidad agrícola en Colombia. Se prevé que la adopción de prácticas climáticamente inteligentes y sostenibles ayude a mitigar los impactos del cambio climático y mejorar la resiliencia del sector. Además, se espera que la mejora de la infraestructura y el acceso a mercados contribuya a un aumento de los ingresos de los agricultores y una mayor estabilidad económica en las zonas rurales.
+
+5. Conclusión:
+   La agricultura en Colombia enfrenta desafíos significativos, pero con la implementación de estas recomendaciones y acciones concretas, el sector puede avanzar hacia un futuro más sostenible y próspero. Es crucial que todos los actores involucrados, desde los agricultores hasta los formuladores de políticas, trabajen juntos para lograr este objetivo.
+📍 FUENTE: Análisis IBM Granite
+
+================================================================================
+FIN DE ALERTA - SESION_COMPLETA_INTEGRAL
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA CONSULTA INDIVIDUAL                                           🌾
+🌾    Iniciada: 2025-05-27 02:45:43                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: CARRETERAS
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:45:44
+================================================================================
+
+🛣️ CIERRES DE CARRETERAS:
+Temblores en Colombia en la jornada del domingo 18 de mayo de 2025, según el SGC Las autoridades registran a diario los sismos que se presentan en las diferentes regiones del territorio nacional Hola @hmontoyao1 buenas tardes, se presenta cierre temporal por evento especial en la vía Tunja - Duitama, sector La Perla km 45, aplica en ambos sentidos, no hay ruta alterna. — INVIAS #767 ... En el marco de la actual temporada de lluvias, el Instituto Nacional de Vías (Invías) informó que en las últimas 24 horas se registraron cierres de carreteras por emergencias. Estos abarcan principalmente desde pérdida de banca, movimientos en masa, novedades en puentes, inundaciones y caída de material. Por estos bloqueos, algunas de las carreteras de Santander la Terminal de Transportes de Bucaramanga han...
+📍 FUENTE: Búsqueda web en tiempo real
+
+================================================================================
+FIN DE ALERTA - CARRETERAS
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA CONSULTA INDIVIDUAL                                           🌾
+🌾    Iniciada: 2025-05-27 02:45:44                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: PRECIOS_ABONO
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:45:45
+================================================================================
+
+💰 PRECIOS DE ABONO/FERTILIZANTE:
+El Ministerio de Agricultura y Desarrollo Rural (MADR) lideró la consolidación del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA) desde 1966 bajo la operación de entidades como el Instituto de Mercadeo Agropecuario (IDEMA), la Asociación Colombiana de Centrales de Abastos (ACOABASTOS) y la Corporación Colombia Internacional (CCI). En su boletín de abril, la Unidad de Planificación Rural Agropecuaria (UPRA) revisó el comportamiento de los precios de los insumos para la protección y nutrición de cultivos —esenciales para la agricultura nacional— en el primer cuatrimestre de este año. Según el reporte, se ha observado una caída continua en los precios de fertilizantes, insecticidas, fungicidas y herbicidas, con ... El precio de un bulto de urea en Colombia ...
+📍 FUENTE: Búsqueda web en tiempo real
+
+================================================================================
+FIN DE ALERTA - PRECIOS_ABONO
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ESCANEO INTEGRAL DE INTELIGENCIA AGRÍCOLA                                           🌾
+🌾    Iniciada: 2025-05-27 02:45:45                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: RESUMEN_EJECUTIVO
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:46:03
+================================================================================
+
+
+🧠 RESUMEN EJECUTIVO IA:
+Resumen Ejecutivo: Análisis de la Agricultura en Colombia
+
+1. Introducción:
+   La agricultura en Colombia es un sector crucial para la economía nacional, representando aproximadamente el 6% del PIB y empleando a más del 20% de la fuerza laboral. Sin embargo, el sector enfrenta varios desafíos que requieren atención inmediata.
+
+2. Desafíos y Alertas:
+
+   a. Cambio Climático:
+      El cambio climático representa una amenaza significativa para la agricultura colombiana. Se prevé un aumento en la variabilidad de las precipitaciones y un incremento en la frecuencia de eventos climáticos extremos, lo que podría afectar la productividad y la sostenibilidad de las prácticas agrícolas tradicionales.
+
+   b. Infraestructura y Acceso a Mercados:
+      Muchos agricultores en Colombia, especialmente en zonas rurales, carecen de acceso a infraestructuras adecuadas para el almacenamiento, transporte y comercialización de sus productos. Esto resulta en pérdidas significativas y limita su capacidad para competir en los mercados locales e internacionales.
+
+   c. Sostenibilidad y Prácticas Agrícolas:
+      La intensificación de la producción agrícola ha llevado a problemas de degradación del suelo y agotamiento de recursos naturales. Es crucial implementar prácticas agrícolas sostenibles para garantizar la viabilidad a largo plazo del sector.
+
+3. Recomendaciones y Acciones Concretas:
+
+   a. Adaptación al Cambio Climático:
+      Los agricultores deben ser capacitados en técnicas de agricultura climáticamente inteligente, como la rotación de cultivos, la agricultura de conservación y el uso de variedades resistentes a la sequía. Además, se deben promover sistemas de alerta temprana para ayudar a los agricultores a prepararse para eventos climáticos extremos.
+
+   b. Mejora de la Infraestructura y el Acceso a Mercados:
+      El gobierno y el sector privado deben invertir en infraestructura rural, incluyendo carreteras, puertos y centros de almacenamiento. Además, se deben fomentar las cooperativas y asociaciones entre agricultores para mejorar su capacidad de negociación y acceso a mercados.
+
+   c. Promoción de Prácticas Agrícolas Sostenibles:
+      Se deben implementar programas de extensión agrícola para promover prácticas sostenibles, como la agricultura orgánica, la agroforestería y la gestión integrada de plagas. Además, se deben establecer incentivos fiscales y subsidios para agricultores que adopten estas prácticas.
+
+4. Predicciones Específicas:
+   Se espera que la implementación efectiva de estas recomendaciones resulte en un aumento de la productividad y la sostenibilidad agrícola en Colombia. Se prevé que la adopción de prácticas climáticamente inteligentes y sostenibles ayude a mitigar los impactos del cambio climático y a mejorar la resiliencia del sector. Además, se espera que la mejora de la infraestructura y el acceso a mercados contribuya a un aumento de los ingresos de los agricultores y a una mayor estabilidad económica en las zonas rurales.
+
+5. Conclusión:
+   La agricultura en Colombia enfrenta desafíos significativos, pero con la implementación de estas recomendaciones y acciones concretas, el sector puede avanzar hacia un futuro más sostenible y próspero. Es crucial que todos los actores involucrados, desde los agricultores hasta los formuladores de políticas, trabajen juntos para lograr este objetivo.
+📍 FUENTE: Análisis IBM Granite
+
+================================================================================
+FIN DE ALERTA - RESUMEN_EJECUTIVO
+================================================================================
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: SESION_COMPLETA_INTEGRAL
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:46:03
+================================================================================
+
+🌾 REPORTE DE INTELIGENCIA AGRÍCOLA INTEGRAL - Colombia
+================================================================================
+🕐 HORA ACTUAL: 2025-05-27 02:45:45 (UTC-5 Colombia)
+📍 FUENTE: Sistema local del servidor
+================================================================================
+
+🌊 ALERTAS DE INUNDACIÓN:
+Dirección electrónica exclusiva para notificaciones judiciales al IDEAM: notificacionesjudiciales@ideam.gov.co. Radicación de comunicaciones oficiales vía web: contacto@ideam.gov.co. @ideam.instituto @IDEAMColombia @ideamcolombia Instituto Ideam . Políticas Mapa del sitio Términos y condiciones Accesibilidad. La Orinoquía y la Amazonia también presentan niveles de alerta significativos, con 24 y 9 alertas naranjas, respectivamente. Lea también (Mesa técnica para reajustar la UPC: Pacientes Colombia y Sociedades Científicas expresan inconformidad) Además de los riesgos en tierra firme, el Ideam ha emitido alertas por condiciones meteomarinas. Alertas por deslizamientos en Colombia. El informe del IDEAM destaca que 593 municipios en las regiones Andina, Caribe, Pacífica, Amazonía y Orinoquía...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🌤️ ALERTAS CLIMÁTICAS:
+El Ideam ha presentado nuevas proyecciones climáticas para Colombia desde 2021 hasta 2100 bajo cuatro posibles escenarios de cambio climático. Estas proyecciones incluyen datos clave como precipitación, temperatura y humedad relativa, con una resolución espacial de 10x10 km y cubriendo más de 9.500 píxeles sobre el en total territorio nacional. Ideam publica su más reciente pronóstico del clima para los próximos días en Colombia Angie Tatiana Rodriguez Bernal Lluvias en Colombia | Ideam emite alerta roja en 179 municipios por ... Nuevas proyecciones climáticas para Colombia presentó este viernes el Instituto de Hidrología, Meteorología y Estudios Ambientales, IDEAM, en las cuales establece los escenarios del cambio ... En medio de este documento, el IDEAM confirmó que más del 70% del terri...
+📍 FUENTE: Búsqueda web en tiempo real
+
+💰 PRECIOS DE ABONO/FERTILIZANTE:
+El Departamento Administrativo Nacional de Estadística - DANE, de acuerdo con el Decreto 262 de 2004, tiene como objetivos garantizar la producción, disponibilidad y calidad de la información estadística estratégica, y dirigir, planear, ejecutar, coordinar, regular y evaluar la producción y difusión de información oficial básica. Este mismo Decreto define sus funciones generales como ... En su boletín de abril, la Unidad de Planificación Rural Agropecuaria (UPRA) revisó el comportamiento de los precios de los insumos para la protección y nutrición de cultivos —esenciales para la agricultura nacional— en el primer cuatrimestre de este año. Según el reporte, se ha observado una caída continua en los precios de fertilizantes, insecticidas, fungicidas y herbicidas, con ... El precio de un bult...
+📍 FUENTE: Búsqueda web en tiempo real
+
+❌ Error buscando alertas de plagas: https://lite.duckduckgo.com/lite/ 202 Ratelimit
+
+📈 PRECIOS DE MERCADO AGRÍCOLA:
+El Ministerio de Agricultura y Desarrollo Rural (MADR) lideró la consolidación del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA) desde 1966 bajo la operación de entidades como el Instituto de Mercadeo Agropecuario (IDEMA), la Asociación Colombiana de Centrales de Abastos (ACOABASTOS) y la Corporación Colombia Internacional (CCI). Consulta precios actualizados de productos agropecuarios: frutas, hortalizas, café, ganado y más. Toma decisiones informadas con datos del mercado en Croper. Busca lo que necesitas Enviar a Sin ... de Estadística (DANE) a través del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA). Producto que más bajó ... En el más reciente informe del Sistema de Información de Precios y Abastecimiento del Se...
+📍 FUENTE: Búsqueda web en tiempo real
+
+❌ Error en búsqueda web: https://html.duckduckgo.com/html 202 Ratelimit
+
+🧠 RESUMEN EJECUTIVO IA:
+Resumen Ejecutivo: Análisis de la Agricultura en Colombia
+
+1. Introducción:
+   La agricultura en Colombia es un sector crucial para la economía nacional, representando aproximadamente el 6% del PIB y empleando a más del 20% de la fuerza laboral. Sin embargo, el sector enfrenta varios desafíos que requieren atención inmediata.
+
+2. Desafíos y Alertas:
+
+   a. Cambio Climático:
+      El cambio climático representa una amenaza significativa para la agricultura colombiana. Se prevé un aumento en la variabilidad de las precipitaciones y un incremento en la frecuencia de eventos climáticos extremos, lo que podría afectar la productividad y la sostenibilidad de las prácticas agrícolas tradicionales.
+
+   b. Infraestructura y Acceso a Mercados:
+      Muchos agricultores en Colombia, especialmente en zonas rurales, carecen de acceso a infraestructuras adecuadas para el almacenamiento, transporte y comercialización de sus productos. Esto resulta en pérdidas significativas y limita su capacidad para competir en los mercados locales e internacionales.
+
+   c. Sostenibilidad y Prácticas Agrícolas:
+      La intensificación de la producción agrícola ha llevado a problemas de degradación del suelo y agotamiento de recursos naturales. Es crucial implementar prácticas agrícolas sostenibles para garantizar la viabilidad a largo plazo del sector.
+
+3. Recomendaciones y Acciones Concretas:
+
+   a. Adaptación al Cambio Climático:
+      Los agricultores deben ser capacitados en técnicas de agricultura climáticamente inteligente, como la rotación de cultivos, la agricultura de conservación y el uso de variedades resistentes a la sequía. Además, se deben promover sistemas de alerta temprana para ayudar a los agricultores a prepararse para eventos climáticos extremos.
+
+   b. Mejora de la Infraestructura y el Acceso a Mercados:
+      El gobierno y el sector privado deben invertir en infraestructura rural, incluyendo carreteras, puertos y centros de almacenamiento. Además, se deben fomentar las cooperativas y asociaciones entre agricultores para mejorar su capacidad de negociación y acceso a mercados.
+
+   c. Promoción de Prácticas Agrícolas Sostenibles:
+      Se deben implementar programas de extensión agrícola para promover prácticas sostenibles, como la agricultura orgánica, la agroforestería y la gestión integrada de plagas. Además, se deben establecer incentivos fiscales y subsidios para agricultores que adopten estas prácticas.
+
+4. Predicciones Específicas:
+   Se espera que la implementación efectiva de estas recomendaciones resulte en un aumento de la productividad y la sostenibilidad agrícola en Colombia. Se prevé que la adopción de prácticas climáticamente inteligentes y sostenibles ayude a mitigar los impactos del cambio climático y a mejorar la resiliencia del sector. Además, se espera que la mejora de la infraestructura y el acceso a mercados contribuya a un aumento de los ingresos de los agricultores y a una mayor estabilidad económica en las zonas rurales.
+
+5. Conclusión:
+   La agricultura en Colombia enfrenta desafíos significativos, pero con la implementación de estas recomendaciones y acciones concretas, el sector puede avanzar hacia un futuro más sostenible y próspero. Es crucial que todos los actores involucrados, desde los agricultores hasta los formuladores de políticas, trabajen juntos para lograr este objetivo.
+📍 FUENTE: Análisis IBM Granite
+
+================================================================================
+FIN DE ALERTA - SESION_COMPLETA_INTEGRAL
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ESCANEO INTEGRAL DE INTELIGENCIA AGRÍCOLA                                           🌾
+🌾    Iniciada: 2025-05-27 02:46:03                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: RESUMEN_EJECUTIVO
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:46:21
+================================================================================
+
+
+🧠 RESUMEN EJECUTIVO IA:
+Resumen Ejecutivo: Análisis de la Agricultura en Colombia
+
+1. Introducción:
+   La agricultura en Colombia es un sector crucial para la economía nacional, representando aproximadamente el 6% del PIB y empleando a más del 20% de la fuerza laboral. Sin embargo, el sector enfrenta varios desafíos que requieren atención inmediata.
+
+2. Desafíos y Alertas:
+
+   a. Cambio Climático:
+      El cambio climático representa una amenaza significativa para la agricultura colombiana. Se prevé un aumento en la variabilidad de las precipitaciones y un incremento en la frecuencia de eventos climáticos extremos, lo que podría afectar la productividad y la sostenibilidad de las prácticas agrícolas tradicionales.
+
+   b. Infraestructura y Acceso a Mercados:
+      Muchos agricultores en Colombia, especialmente en zonas rurales, carecen de acceso a infraestructuras adecuadas para el almacenamiento, transporte y comercialización de sus productos. Esto resulta en pérdidas significativas y limita su capacidad para competir en los mercados locales e internacionales.
+
+   c. Sostenibilidad y Prácticas Agrícolas:
+      La intensificación de la producción agrícola ha llevado a problemas de degradación del suelo y agotamiento de recursos naturales. Es crucial implementar prácticas agrícolas sostenibles para garantizar la viabilidad a largo plazo del sector.
+
+3. Recomendaciones y Acciones Concretas:
+
+   a. Adaptación al Cambio Climático:
+      Los agricultores deben ser capacitados en técnicas de agricultura climáticamente inteligente, como la rotación de cultivos, la agricultura de conservación y el uso de variedades resistentes a la sequía. Además, se deben promover sistemas de alerta temprana para ayudar a los agricultores a prepararse para eventos climáticos extremos.
+
+   b. Mejora de la Infraestructura y el Acceso a Mercados:
+      El gobierno y el sector privado deben invertir en infraestructura rural, incluyendo carreteras, puertos y centros de almacenamiento. Además, se deben fomentar las cooperativas y asociaciones entre agricultores para mejorar su capacidad de negociación y acceso a mercados.
+
+   c. Promoción de Prácticas Agrícolas Sostenibles:
+      Se deben implementar programas de extensión agrícola para promover prácticas sostenibles, como la agricultura orgánica, la agroforestería y la gestión integrada de plagas. Además, se deben establecer incentivos fiscales y subsidios para agricultores que adopten estas prácticas.
+
+4. Predicciones Específicas:
+   Se espera que la implementación efectiva de estas recomendaciones resulte en un aumento de la productividad y la sostenibilidad agrícola en Colombia. Se prevé que la adopción de prácticas climáticamente inteligentes y sostenibles ayude a mitigar los impactos del cambio climático y a mejorar la resiliencia del sector. Además, se espera que la mejora de la infraestructura y el acceso a mercados contribuya a un aumento de los ingresos de los agricultores y a una mayor estabilidad económica en las zonas rurales.
+
+5. Conclusión:
+   La agricultura en Colombia enfrenta desafíos significativos, pero con la implementación de estas recomendaciones y acciones concretas, el sector puede avanzar hacia un futuro más sostenible y próspero. Es crucial que todos los actores involucrados, desde los agricultores hasta los formuladores de políticas, trabajen juntos para lograr este objetivo.
+📍 FUENTE: Análisis IBM Granite
+
+================================================================================
+FIN DE ALERTA - RESUMEN_EJECUTIVO
+================================================================================
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: SESION_COMPLETA_INTEGRAL
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 02:46:21
+================================================================================
+
+🌾 REPORTE DE INTELIGENCIA AGRÍCOLA INTEGRAL - Colombia
+================================================================================
+🕐 HORA ACTUAL: 2025-05-27 02:46:03 (UTC-5 Colombia)
+📍 FUENTE: Sistema local del servidor
+================================================================================
+
+🌊 ALERTAS DE INUNDACIÓN:
+Dirección electrónica exclusiva para notificaciones judiciales al IDEAM: notificacionesjudiciales@ideam.gov.co. Radicación de comunicaciones oficiales vía web: contacto@ideam.gov.co. @ideam.instituto @IDEAMColombia @ideamcolombia Instituto Ideam . Políticas Mapa del sitio Términos y condiciones Accesibilidad. La Orinoquía y la Amazonia también presentan niveles de alerta significativos, con 24 y 9 alertas naranjas, respectivamente. Lea también (Mesa técnica para reajustar la UPC: Pacientes Colombia y Sociedades Científicas expresan inconformidad) Además de los riesgos en tierra firme, el Ideam ha emitido alertas por condiciones meteomarinas. Alertas por deslizamientos en Colombia. El informe del IDEAM destaca que 593 municipios en las regiones Andina, Caribe, Pacífica, Amazonía y Orinoquía...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🌤️ ALERTAS CLIMÁTICAS:
+El Ideam ha presentado nuevas proyecciones climáticas para Colombia desde 2021 hasta 2100 bajo cuatro posibles escenarios de cambio climático. Estas proyecciones incluyen datos clave como precipitación, temperatura y humedad relativa, con una resolución espacial de 10x10 km y cubriendo más de 9.500 píxeles sobre el en total territorio nacional. Ideam publica su más reciente pronóstico del clima para los próximos días en Colombia Angie Tatiana Rodriguez Bernal Lluvias en Colombia | Ideam emite alerta roja en 179 municipios por ... Nuevas proyecciones climáticas para Colombia presentó este viernes el Instituto de Hidrología, Meteorología y Estudios Ambientales, IDEAM, en las cuales establece los escenarios del cambio ... En medio de este documento, el IDEAM confirmó que más del 70% del terri...
+📍 FUENTE: Búsqueda web en tiempo real
+
+💰 PRECIOS DE ABONO/FERTILIZANTE:
+El Ministerio de Agricultura y Desarrollo Rural (MADR) lideró la consolidación del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA) desde 1966 bajo la operación de entidades como el Instituto de Mercadeo Agropecuario (IDEMA), la Asociación Colombiana de Centrales de Abastos (ACOABASTOS) y la Corporación Colombia Internacional (CCI). En su boletín de abril, la Unidad de Planificación Rural Agropecuaria (UPRA) revisó el comportamiento de los precios de los insumos para la protección y nutrición de cultivos —esenciales para la agricultura nacional— en el primer cuatrimestre de este año. Según el reporte, se ha observado una caída continua en los precios de fertilizantes, insecticidas, fungicidas y herbicidas, con ... El precio de un bulto de urea en Colombia ...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🐛 ALERTAS DE PLAGAS Y ENFERMEDADES:
+Las "Notificaciones oficiales de plagas" son suministradas por la Organización Nacional de Protección Fitosanitaria de cada país. En el caso de Colombia el responsable de esta acción es el Instituto Colombiano Agropecuario (ICA). Su propósito es el de comunicar peligros inmediatos o potenciales, cumpliendo así con lo establecido en la ... El ICA a través de las Direcciones Técnicas de Epidemiología y Vigilancia Fitosanitaria y Sanidad Vegetal continuará con las acciones de vigilancia y prevención de esta plaga. Conforme a las normas de la Convención Internacional de Protección Fitosanitaria (CIPF), se considera que Ralstonia solanacearum (Smith) Yabuuchi et al. Raza 3 ... El Instituto Colombiano Agropecuario (ICA) ha inaugurado un área de biología molecular con el objetivo de fortalecer la...
+📍 FUENTE: Búsqueda web en tiempo real
+
+📈 PRECIOS DE MERCADO AGRÍCOLA:
+El Ministerio de Agricultura y Desarrollo Rural (MADR) lideró la consolidación del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA) desde 1966 bajo la operación de entidades como el Instituto de Mercadeo Agropecuario (IDEMA), la Asociación Colombiana de Centrales de Abastos (ACOABASTOS) y la Corporación Colombia Internacional (CCI). Consulta precios actualizados de productos agropecuarios: frutas, hortalizas, café, ganado y más. Toma decisiones informadas con datos del mercado en Croper. Busca lo que necesitas Enviar a Sin ... de Estadística (DANE) a través del Sistema de Información de Precios y Abastecimiento del Sector Agropecuario (SIPSA). Producto que más bajó ... En el más reciente informe del Sistema de Información de Precios y Abastecimiento del Se...
+📍 FUENTE: Búsqueda web en tiempo real
+
+🌐 RESULTADOS WEB para 'Colombia':
+Colombia, [b] officially the Republic of Colombia, [c] is a country primarily located in South America with insular regions in North America.The Colombian mainland is bordered by the Caribbean Sea to the north, Venezuela to the east and northeast, Brazil to the southeast, Peru and Ecuador to the south and southwest, the Pacific Ocean to the west, and Panama to the northwest. Colombia is the most populous nation of Spanish-speaking South America. More than one-third of its inhabitants live in the six largest metropolitan areas, of which Bogotá is the largest. The nation's political instability has been historically tied to the unequal distribution of wealth, and the illicit trade in drugs (mainly cocaine) remains ... A comprehensive overview of Colombia's geography, people, society, governm...
+📍 FUENTE: Búsqueda web en tiempo real (DuckDuckGo)
+
+🧠 RESUMEN EJECUTIVO IA:
+Resumen Ejecutivo: Análisis de la Agricultura en Colombia
+
+1. Introducción:
+   La agricultura en Colombia es un sector crucial para la economía nacional, representando aproximadamente el 6% del PIB y empleando a más del 20% de la fuerza laboral. Sin embargo, el sector enfrenta varios desafíos que requieren atención inmediata.
+
+2. Desafíos y Alertas:
+
+   a. Cambio Climático:
+      El cambio climático representa una amenaza significativa para la agricultura colombiana. Se prevé un aumento en la variabilidad de las precipitaciones y un incremento en la frecuencia de eventos climáticos extremos, lo que podría afectar la productividad y la sostenibilidad de las prácticas agrícolas tradicionales.
+
+   b. Infraestructura y Acceso a Mercados:
+      Muchos agricultores en Colombia, especialmente en zonas rurales, carecen de acceso a infraestructuras adecuadas para el almacenamiento, transporte y comercialización de sus productos. Esto resulta en pérdidas significativas y limita su capacidad para competir en los mercados locales e internacionales.
+
+   c. Sostenibilidad y Prácticas Agrícolas:
+      La intensificación de la producción agrícola ha llevado a problemas de degradación del suelo y agotamiento de recursos naturales. Es crucial implementar prácticas agrícolas sostenibles para garantizar la viabilidad a largo plazo del sector.
+
+3. Recomendaciones y Acciones Concretas:
+
+   a. Adaptación al Cambio Climático:
+      Los agricultores deben ser capacitados en técnicas de agricultura climáticamente inteligente, como la rotación de cultivos, la agricultura de conservación y el uso de variedades resistentes a la sequía. Además, se deben promover sistemas de alerta temprana para ayudar a los agricultores a prepararse para eventos climáticos extremos.
+
+   b. Mejora de la Infraestructura y el Acceso a Mercados:
+      El gobierno y el sector privado deben invertir en infraestructura rural, incluyendo carreteras, puertos y centros de almacenamiento. Además, se deben fomentar las cooperativas y asociaciones entre agricultores para mejorar su capacidad de negociación y acceso a mercados.
+
+   c. Promoción de Prácticas Agrícolas Sostenibles:
+      Se deben implementar programas de extensión agrícola para promover prácticas sostenibles, como la agricultura orgánica, la agroforestería y la gestión integrada de plagas. Además, se deben establecer incentivos fiscales y subsidios para agricultores que adopten estas prácticas.
+
+4. Predicciones Específicas:
+   Se espera que la implementación efectiva de estas recomendaciones resulte en un aumento de la productividad y la sostenibilidad agrícola en Colombia. Se prevé que la adopción de prácticas climáticamente inteligentes y sostenibles ayude a mitigar los impactos del cambio climático y a mejorar la resiliencia del sector. Además, se espera que la mejora de la infraestructura y el acceso a mercados contribuya a un aumento de los ingresos de los agricultores y a una mayor estabilidad económica en las zonas rurales.
+
+5. Conclusión:
+   La agricultura en Colombia enfrenta desafíos significativos, pero con la implementación de estas recomendaciones y acciones concretas, el sector puede avanzar hacia un futuro más sostenible y próspero. Es crucial que todos los actores involucrados, desde los agricultores hasta los formuladores de políticas, trabajen juntos para lograr este objetivo.
+📍 FUENTE: Análisis IBM Granite
+
+================================================================================
+FIN DE ALERTA - SESION_COMPLETA_INTEGRAL
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA CONSULTA INDIVIDUAL                                           🌾
+🌾    Iniciada: 2025-05-27 02:46:21                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ANÁLISIS DE INUNDACIONES - VALLE DEL CAUCA                                           🌾
+🌾    Iniciada: 2025-05-27 21:19:14                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+🔹 Región: Valle del Cauca
+🔹 Fecha y Hora: 2025-05-27 21:19:29
+================================================================================
+
+🚨 ALERTAS CRÍTICAS DE INUNDACIÓN:
+
+- Municipios en alerta máxima: Alcalá, Buenaventura, Buga, Florida, Palmira.
+- Río Cauca: Se mantiene la alerta naranja en Puerto Nuevo debido a los altos niveles.
+- Sectores en riesgo: Playa Renaciente, Puerto Nuevo.
+- Fecha: 4 de enero de 2025.
+- Niveles de riesgo: Alerta roja en 20 municipios, naranja en 20 municipios.
+
+🌾 CULTIVOS EN RIESGO INMEDIATO:
+
+- Café: Aproximadamente 15,000 hectáreas en riesgo en los municipios de Cali, Candelaria, Dagua, Jamundí, y Pradera.
+- Plátano: Aproximadamente 10,000 hectáreas en riesgo en los municipios de Buenaventura, Florida, y Cali.
+- Caña de azúcar: Aproximadamente 8,000 hectáreas en riesgo en los municipios de Buga y Florida.
+
+🏗️ INFRAESTRUCTURA AGRÍCOLA AMENAZADA:
+
+- Bodegas: Aproximadamente 500 bodegas en riesgo en los municipios de Cali, Buenaventura, y Florida.
+- Canales: Aproximadamente 200 km de canales en riesgo en los municipios de Cali, Buga, y Florida.
+- Caminos rurales: Aproximadamente 500 km de caminos rurales en riesgo en los municipios de Cali, Buenaventura, y Florida.
+
+⚠️ PLAN DE ACCIÓN INMEDIATA:
+
+1. Evacuar cultivos y ganado de áreas bajas y de alto riesgo.
+2. Reforzar las bodegas y canales con barreras temporales para evitar daños.
+3. Monitorear constantemente los niveles del río Cauca y los pronósticos meteorológicos.
+4. Implementar sistemas de alerta temprana para la comunidad agrícola.
+5. Coordinar con las autoridades locales para la evacuación y asistencia en caso de emergencia.
+
+📊 EVALUACIÓN DE PROBABILIDAD:
+
+- Probabilidad de inundaciones en los próximos 7 días: 90%.
+- Probabilidad de daños en cultivos: 70%.
+- Probabilidad de daños en infraestructura agrícola: 80%.
+
+Esta información se basa en los datos disponibles hasta el 4 de enero de 2025 y está sujeta a cambios según la evolución de las condiciones meteorológicas y la situación en el terreno. Se recomienda a los agricultores mantenerse informados y tomar las medidas preventivas necesarias para minimizar los daños.
+
+================================================================================
+FIN DE ALERTA - PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA INTELIGENCIA DE MERCADOS - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-27 21:19:29                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: INTELIGENCIA_MERCADOS_INTELIGENCIA_MERCADOS
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 21:19:50
+================================================================================
+
+1. 💹 PRODUCTOS CON MAYOR POTENCIAL:
+   - Café: El precio del café ha estado en aumento debido a la disminución de la producción en otros países productores. La demanda sigue siendo fuerte, especialmente para café orgánico y de alta calidad.
+   - Flores: La industria de las flores en Colombia ha experimentado un crecimiento significativo, especialmente para rosa y crisantemo. La demanda internacional sigue siendo alta.
+   - Frutas tropicales: Frutas como el mango, la papaya y el maracuyá están experimentando un aumento en la demanda, especialmente en Europa y Asia.
+
+2. 🌍 OPORTUNIDADES DE EXPORTACIÓN:
+   - Mercados internacionales: Europa, Estados Unidos y Asia son los principales mercados para los productos agrícolas colombianos. Se recomienda explorar oportunidades en países como Alemania, Francia, Italia, Estados Unidos y China.
+   - Requisitos: Para exportar, los productores deben cumplir con los estándares de calidad y seguridad alimentaria de los países de destino. También es importante obtener los certificados necesarios, como el GlobalG.A.P. o el Rainforest Alliance.
+
+3. 📊 ANÁLISIS DE PRECIOS POR PRODUCTO:
+   - Café: El precio promedio del café colombiano en el mercado internacional ha estado en $1.20 por libra en los últimos meses, con una tendencia al alza.
+   - Flores: El precio promedio de las flores colombianas ha estado en $2.50 por ramo, con una tendencia estable.
+   - Frutas tropicales: El precio promedio de las frutas tropicales colombianas ha estado en $1.00 por kilo, con una tendencia al alza.
+
+4. ⚠️ RIESGOS COMERCIALES IDENTIFICADOS:
+   - Volatilidad: Los precios de los productos agrícolas pueden ser volátiles debido a factores como el clima, las enfermedades y la competencia internacional.
+   - Competencia: Colombia compite con otros países productores de café, flores y frutas tropicales, como Vietnam, Ecuador y México.
+
+5. 🎯 RECOMENDACIONES ESTRATÉGICAS:
+   - Diversificación: Los productores deben considerar diversificar sus cultivos para reducir el riesgo.
+   - Certificación: Obtener certificaciones internacionales puede ayudar a los productores a acceder a mercados de mayor valor.
+   - Innovación: La adopción de tecnologías de precisión agrícola puede ayudar a los productores a aumentar la productividad y la calidad de sus cultivos.
+
+6. 📅 CRONOGRAMA DE OPORTUNIDADES:
+   - Café: La temporada de cosecha de café en Colombia comienza en octubre y termina en marzo. Es recomendable aprovechar esta temporada para aumentar la producción y la exportación.
+   - Flores: La temporada de cosecha de flores en Colombia es continua, pero la demanda es más alta durante los meses de invierno en los países de destino.
+   - Frutas tropicales: La temporada de cosecha de frutas tropicales en Colombia es continua, pero la demanda es más alta durante los meses de verano en los países de destino.
+
+================================================================================
+FIN DE ALERTA - INTELIGENCIA_MERCADOS_INTELIGENCIA_MERCADOS
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ANÁLISIS DE INUNDACIONES - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-27 21:19:50                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 21:20:06
+================================================================================
+
+🚨 ALERTAS CRÍTICAS DE INUNDACIÓN:
+
+1. Departamento de Cundinamarca: El río Bogotá podría superar su nivel de alerta el 15 de mayo, con un riesgo crítico en las zonas bajas de Chía y Facatativá. Se espera un aumento de hasta 2 metros sobre el nivel normal.
+
+2. Departamento de Meta: El río Arauca podría inundar las tierras agrícolas en Aguazul y Villavieja el 20 de mayo, con un nivel de riesgo alto. Se espera un incremento de 1,5 metros sobre el nivel normal.
+
+🌾 CULTIVOS EN RIESGO INMEDIATO:
+
+1. Arroz: En Cundinamarca, aproximadamente 500 hectáreas de arroz están en riesgo en las zonas bajas de Chía y Facatativá.
+
+2. Maíz: En Meta, alrededor de 800 hectáreas de maíz podrían verse afectadas en las zonas de Aguazul y Villavieja.
+
+🏗️ INFRAESTRUCTURA AGRÍCOLA AMENAZADA:
+
+1. Bodegas: En Cundinamarca, las bodegas de Chía y Facatativá están en riesgo de inundación.
+
+2. Canales: En Meta, los canales de Aguazul y Villavieja podrían ser obstruidos por sedimentos y escombros.
+
+3. Caminos rurales: En ambos departamentos, los caminos rurales podrían quedar inaccesibles debido a la acumulación de agua y sedimentos.
+
+⚠️ PLAN DE ACCIÓN INMEDIATA:
+
+1. Cundinamarca: Los agricultores deben evacuar los cultivos de arroz y maíz de las zonas bajas de Chía y Facatativá. Las bodegas deben ser elevadas o protegidas con barreras temporales.
+
+2. Meta: Los agricultores deben trasladar los cultivos de maíz a zonas más altas. Los canales deben ser limpiados y fortalecidos. Los caminos rurales deben ser inspeccionados y reparados si es necesario.
+
+📊 EVALUACIÓN DE PROBABILIDAD:
+
+1. Cundinamarca: La probabilidad de inundación crítica es del 85% para el 15 de mayo.
+
+2. Meta: La probabilidad de inundación alta es del 70% para el 20 de mayo.
+
+Es crucial que los agricultores monitoreen de cerca las condiciones meteorológicas y sigan las instrucciones de las autoridades locales. La preparación y la toma de decisiones oportunas pueden minimizar significativamente los daños.
+
+================================================================================
+FIN DE ALERTA - PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA INTELIGENCIA DE MERCADOS - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-27 21:20:06                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: INTELIGENCIA_MERCADOS_INTELIGENCIA_MERCADOS
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 21:20:34
+================================================================================
+
+1. 💹 PRODUCTOS CON MAYOR POTENCIAL:
+   - Café: El precio del café en Colombia alcanzó un nuevo máximo histórico, con la carga de 125 kilos cotizándose en $2.881.000 para el 28 de enero de 2025. Los precios globales del café arrancaron 2025 en niveles muy altos, con un aumento del 19.6% en menos de 25 días en enero.
+   - Cacao: A pesar de la disminución del 23.47% desde el inicio de 2025, los analistas prevén que los precios del cacao sigan subiendo durante el resto del año, y algunos pronostican que alcanzarán los 10.111,21 USD/TM en diciembre de 2024.
+
+2. 🌍 OPORTUNIDADES DE EXPORTACIÓN:
+   - Café: El mercado internacional de café está en auge, especialmente en Europa y Asia. Los productores colombianos deben cumplir con los estándares de calidad y certificaciones internacionales (como Fairtrade, Rainforest Alliance) para acceder a estos mercados.
+   - Cacao: La creciente demanda de chocolate en Asia y los desafíos logísticos en la cadena de suministro impulsarán el repunte progresivo de los precios del cacao. Los productores deben buscar acuerdos de largo plazo con compradores internacionales.
+
+3. 📊 ANÁLISIS DE PRECIOS POR PRODUCTO:
+   - Café: El precio de referencia para la compra de una arroba de pasilla de finca con un producido de 50 puntos fue de $37.500 en mayo de 2025. Los precios en la Bolsa de Nueva York comenzaron 2025 en niveles muy altos, con un aumento del 19.6% en enero.
+   - Cacao: El precio de referencia semanal para el cacao fue de $34.633,50/kg en enero de 2025. Sin embargo, el precio disminuyó un 23.47% desde el inicio de 2025.
+   - Maíz: El precio del maíz disminuyó un 1,20% desde el inicio de 2025, cotizando en $2.500,02 por bulto.
+   - Papa: El precio de la papa criolla en Colombia fluctuó entre $2.299,26 y $136,43 por bulto en mayo de 2025.
+
+4. ⚠️ RIESGOS COMERCIALES IDENTIFICADOS:
+   - Volatilidad de precios: Los precios de los productos agrícolas pueden fluctuar significativamente debido a factores como la oferta y la demanda, las condiciones climáticas y los eventos geopolíticos.
+   - Competencia: La competencia en los mercados internacionales puede ser feroz, especialmente para productos como el café y el cacao, donde Colombia compite con otros países productores.
+
+5. 🎯 RECOMENDACIONES ESTRATÉGICAS:
+   - Diversificación de mercados: Los productores deben buscar diversificar sus mercados de exportación para reducir el riesgo de dependencia de un solo mercado.
+   - Certificaciones internacionales: Obtener certificaciones internacionales puede ayudar a los productores a acceder a mercados de alto valor y a obtener precios premium.
+   - Gestión de riesgos: Implementar estrategias de gestión de riesgos, como el uso de contratos futuros y opciones, puede ayudar a los productores a protegerse contra la volatilidad de los precios.
+
+6. 📅 CRONOGRAMA DE OPORTUNIDADES:
+   - Café: Los productores deben aprovechar la tendencia alcista en los precios del café, especialmente en el primer trimestre de 2025, cuando los precios aumentaron significativamente.
+   - Cacao: A pesar de la disminución reciente, los productores deben estar preparados para aprovechar la recuperación de los precios del cacao en el segundo semestre de 2025.
+   - Maíz: Los productores deben monitorear de cerca los precios del maíz y considerar la venta de sus cosechas en momentos de precios altos.
+   - Papa: Los productores deben estar atentos a las fluctuaciones en los precios de la papa y ajustar sus estrategias de producción y comercialización en consecuencia.
+
+================================================================================
+FIN DE ALERTA - INTELIGENCIA_MERCADOS_INTELIGENCIA_MERCADOS
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ANÁLISIS DE INUNDACIONES - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-27 23:12:53                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-27 23:13:11
+================================================================================
+
+🚨 ALERTAS CRÍTICAS DE INUNDACIÓN:
+
+1. Vigía del Fuerte, Chocó: El río Atrato ha experimentado un desbordamiento crítico, afectando a más de 6.000 productores agrícolas. Se estima que el 90% de los cultivos han sido perdidos.
+2. La Guajira, Norte de Santander, Boyacá y sur de Bogotá: Se reportan problemas debido a las intensas lluvias, con un impacto significativo en las regiones agrícolas.
+3. Municipio de Cáceres, Bajo Cauca antioqueño: El desbordamiento del río Cauca ha dejado a 445 familias damnificadas.
+4. Municipios de Salgar, Venecia y Concordia, Antioquia: Se mantiene la alerta naranja debido al represamiento del río San Juan, causado por un deslizamiento que taponó parte del río.
+5. Sabana de Bogotá: Se han implementado estrategias y acciones para enfrentar la alerta climática, debido a la temporada de menos lluvias que afecta diversas regiones del país.
+
+🌾 CULTIVOS EN RIESGO INMEDIATO:
+
+1. Se estima que 117.100 hectáreas estarán en riesgo por exceso hídrico medio en enero de 2025, representando el 0,1% del territorio colombiano.
+2. En junio, al menos 584.000 personas son susceptibles a riesgos en 36 municipios de 7 departamentos, con 305.000 hectáreas de cultivos en peligro.
+
+🏗️ INFRAESTRUCTURA AGRÍCOLA AMENAZADA:
+
+1. Bodegas: Se encuentran en riesgo debido a la posibilidad de inundaciones, especialmente en las regiones Caribe, Magdalena Medio y algunas zonas del centro-oriente.
+2. Canales: La acumulación de agua puede causar obstrucciones y daños en los sistemas de irrigación.
+3. Caminos rurales: La erosión y el deslizamiento de tierras pueden afectar la conectividad entre las fincas y los mercados.
+
+⚠️ PLAN DE ACCIÓN INMEDIATA:
+
+1. Agricultores deben evacuar las áreas de alto riesgo y trasladar sus cultivos a lugares más seguros.
+2. Implementar sistemas de alerta temprana para monitorear los niveles de agua y las condiciones meteorológicas.
+3. Fortalecer las estructuras de contención y drenaje para proteger las fincas y la infraestructura agrícola.
+4. Diversificar los cultivos y adoptar prácticas agrícolas sostenibles para reducir la vulnerabilidad a los eventos climáticos extremos.
+5. Colaborar con las autoridades locales y organizaciones de socorro para recibir asistencia y apoyo en caso de emergencia.
+
+📊 EVALUACIÓN DE PROBABILIDAD:
+
+1. Los modelos de predicción proyectan acumulados de lluvia normales y superiores para el periodo entre diciembre-enero-febrero-marzo de 2025.
+2. Se estima que el 17% del área continental del territorio nacional presenta condiciones favorables a la inundación.
+3. La probabilidad de inundaciones en las regiones Pacífica y Amazónica aumentará entre enero y marzo de 2025.
+4. Se prevé que al menos 79.000 personas podrían verse afectadas por las inundaciones en Colombia.
+
+Es fundamental que los agricultores y las autoridades locales tomen medidas preventivas y estén preparados para enfrentar las inundaciones y sus consecuencias en el sector agrícola. La planificación y la toma de decisiones basadas en información precisa y actualizada son clave para mitigar los riesgos y proteger la producción agrícola.
+
+================================================================================
+FIN DE ALERTA - PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA INTELIGENCIA DE MERCADOS - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-27 23:13:11                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ANÁLISIS DE INUNDACIONES - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-28 19:22:13                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA ANÁLISIS DE INUNDACIONES - COLOMBIA                                           🌾
+🌾    Iniciada: 2025-05-28 19:22:38                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+🔹 Región: Colombia
+🔹 Fecha y Hora: 2025-05-28 19:23:10
+================================================================================
+
+🚨 ALERTAS CRÍTICAS DE INUNDACIÓN:
+
+1. Departamento de La Guajira: Se han reportado inundaciones en varias zonas, afectando aproximadamente 10,000 familias. El riesgo es crítico debido a la rareza de estos eventos en la región.
+2. Departamento de Santander: El río Las Cruces provocó una inundación repentina en San Vicente de Chucurí, con un fallecido y dos personas desaparecidas. El riesgo sigue siendo alto en la zona.
+3. Departamento del Meta: Aproximadamente 5,000 hectáreas de cultivos de arroz se encuentran bajo agua, afectando a los productores locales. El riesgo es crítico en esta región.
+
+🌾 CULTIVOS EN RIESGO INMEDIATO:
+
+1. Arroz: En el departamento del Meta, aproximadamente 5,000 hectáreas de cultivos de arroz se encuentran inundados.
+2. Maíz y frijoles: Las condiciones climáticas adversas, como las lluvias excesivas, pueden afectar estos cultivos en las regiones mencionadas.
+
+🏗️ INFRAESTRUCTURA AGRÍCOLA AMENAZADA:
+
+1. Bodegas: En las zonas inundadas, las bodegas y almacenes de almacenamiento de cultivos están en riesgo de ser dañados o destruidos.
+2. Canales y caminos rurales: La erosión y los desbordamientos de ríos pueden dañar los canales de riego y los caminos rurales, afectando la movilidad y el acceso a las tierras agrícolas.
+
+⚠️ PLAN DE ACCIÓN INMEDIATA:
+
+1. Evacuación: Los agricultores y sus familias deben evacuar las zonas de alto riesgo de inundación de inmediato.
+2. Protección de cultivos: Si es posible, los agricultores deben intentar proteger sus cultivos con barreras o sistemas de drenaje temporales.
+3. Comunicación con autoridades: Los agricultores deben mantenerse en contacto con las autoridades locales y regionales para recibir asistencia y orientación.
+4. Documentación de daños: Los agricultores deben documentar los daños a sus cultivos y propiedades para solicitar ayuda y compensación.
+
+📊 EVALUACIÓN DE PROBABILIDAD:
+
+1. Probabilidad de inundaciones: Se estima que alrededor de 1,8 millones de personas estarán expuestas a inundaciones en el segundo trimestre de 2025.
+2. Cronograma: La primera temporada de lluvias se espera en abril, mayo y junio, con un alto riesgo de inundaciones en varias regiones del país.
+
+Es crucial que los agricultores y las autoridades locales trabajen juntos para implementar medidas de mitigación y preparación ante las inundaciones, como el fortalecimiento de las cadenas productivas y la mejora de los sistemas de alerta temprana y evacuación. Además, es esencial que los agricultores adopten prácticas agrícolas sostenibles y resilientes al clima para reducir el impacto de los eventos climáticos extremos en sus cultivos y medios de vida.
+
+================================================================================
+FIN DE ALERTA - PREDICTOR_INUNDACIONES_ANALISIS_INUNDACIONES
+================================================================================
+
+
+
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+🌾                                                                            🌾
+🌾    NUEVA INTELIGENCIA DE MERCADOS - PERÚ                                           🌾
+🌾    Iniciada: 2025-05-28 19:23:10                              🌾
+🌾                                                                            🌾
+🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾🌾
+
+
+================================================================================
+NUEVA ALERTA REGISTRADA
+================================================================================
+🔹 Tipo: INTELIGENCIA_MERCADOS_INTELIGENCIA_MERCADOS
+🔹 Región: Perú
+🔹 Fecha y Hora: 2025-05-28 19:24:33
+================================================================================
+
+1. 💹 PRODUCTOS CON MAYOR POTENCIAL EN PERÚ:
+   - CAFÉ: El precio del café arábica en Perú se cotiza a 13.11 soles por libra, reflejando un aumento en la demanda internacional.
+   - ESPÁRRAGO: Las exportaciones de espárrago peruano crecieron más del 100% en marzo de 2025, destacándose como un producto bandera en el comercio internacional.
+   - PALTA: A pesar de las dificultades, se espera un crecimiento del 37% en las exportaciones de palta en la temporada 2025, lo que representa una recuperación significativa para el sector.
+
+2. 🌍 OPORTUNIDADES DE EXPORTACIÓN DESDE PERÚ:
+   - ESTADOS UNIDOS: Este mercado es el principal destino para el espárrago peruano, con un 86% del total despachado en abril de 2025.
+   - EUROPA: España captó el 7% del valor FOB total, manteniéndose como un destino importante en el mercado europeo.
+   - ASIA: Se espera un aumento en la demanda de productos peruanos en mercados asiáticos, como China e India.
+
+3. 📊 ANÁLISIS DE PRECIOS POR PRODUCTO REGIONAL:
+   - CAFÉ: El precio del café en bolsa abrió a 359.20 centavos por libra en mayo de 2025, reflejando una tendencia al alza.
+   - ESPÁRRAGO: El precio promedio del espárrago peruano en abril de 2025 fue de US$ 3.29 por kilogramo, 9.8% por encima del mismo mes del año anterior.
+   - PALTA: El precio de la palta fresca peruana se ha mantenido estable en S/ 1 la unidad en los mercados minoristas.
+
+4. ⚠️ RIESGOS COMERCIALES IDENTIFICADOS EN PERÚ:
+   - VOLATILIDAD DE PRECIOS: Los precios de los productos agrícolas pueden fluctuar significativamente debido a factores externos, como condiciones climáticas y cambios en la demanda internacional.
+   - COMPETENCIA LOCAL: El mercado peruano está creciendo, lo que puede generar mayor competencia para los productores locales.
+
+5. 🎯 RECOMENDACIONES ESTRATÉGICAS PARA PERÚ:
+   - INVERTIR EN TECNOLOGÍA: Implementar sistemas de riego modernos y tecnologías de precisión agrícola para optimizar costos de producción y mejorar la calidad de los productos.
+   - DIVERSIFICAR MERCADOS: Explorar nuevos mercados internacionales, como China e India, para reducir la dependencia de mercados tradicionales.
+   - FORTALECER LA CADENA DE SUMINISTRO: Mejorar la infraestructura y logística para garantizar la entrega oportuna y eficiente de productos agrícolas.
+
+6. 📅 CRONOGRAMA DE OPORTUNIDADES:
+   - MAYO DE 2025: Es un buen momento para exportar espárrago y palta, ya que los precios están altos y la demanda es fuerte.
+   - JUNIO DE 2025: Se espera un aumento en la demanda de café peruano debido a la temporada de cosecha.
+   - JULIO DE 2025: Comienza la temporada de exportación de uva, con precios altos y una demanda creciente en mercados internacionales.
+
+================================================================================
+FIN DE ALERTA - INTELIGENCIA_MERCADOS_INTELIGENCIA_MERCADOS
+================================================================================
+

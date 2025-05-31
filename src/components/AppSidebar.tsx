@@ -1,6 +1,5 @@
-
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, GraduationCap, User, Grid3X3, Tractor
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -11,25 +10,21 @@ import {
   SidebarMenuItem, 
   SidebarMenuButton, 
   SidebarSeparator, 
-  SidebarTrigger,
   SidebarGroup,
   SidebarGroupLabel,
-  SidebarGroupContent,
-  useSidebar
+  SidebarGroupContent
 } from "@/components/ui/sidebar";
 import { Link } from "react-router-dom";
 
 export function AppSidebar() {
   const location = useLocation();
-  const { state } = useSidebar();
-  const collapsed = state === "collapsed";
 
   // Define the main navigation items
   const navItems = [
     { 
-      icon: Home, 
-      label: "Inicio", 
-      path: "/" 
+      icon: Tractor, 
+      label: "Mi Granja Virtual", 
+      path: "/mi-granja-virtual" 
     },
     { 
       icon: CloudRain, 
@@ -60,6 +55,11 @@ export function AppSidebar() {
       label: "Financiamiento", 
       path: "/financiamiento" 
     },
+    { 
+      icon: GraduationCap, 
+      label: "Aprendiendo", 
+      path: "/aprendiendo" 
+    },
   ];
 
   // Define chatbot and assistance items
@@ -76,27 +76,36 @@ export function AppSidebar() {
     },
   ];
 
+  // Define account items
+  const accountItems = [
+    { 
+      icon: User, 
+      label: "Mi Perfil", 
+      path: "/perfil" 
+    },
+    { 
+      icon: Settings, 
+      label: "Configuración", 
+      path: "/configuracion" 
+    },
+  ];
+
   // Helper function to check if a path is active
   const isActive = (path: string) => {
     return location.pathname === path;
   };
 
   return (
-    <Sidebar variant="inset" className="border-r border-agriculture-terracotta/20">
+    <Sidebar variant="sidebar" collapsible="none" className="border-r border-agriculture-terracotta/20">
       <SidebarHeader className="flex flex-col gap-4 py-4">
-        <div className="flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 px-2">
-            <div className="bg-gradient-to-br from-agriculture-terracotta to-agriculture-earth h-8 w-8 rounded-full flex items-center justify-center">
-              <Leaf className="text-white h-5 w-5" />
-            </div>
-            {!collapsed && (
-              <div>
-                <h3 className="font-semibold text-lg text-gradient">AgroClima</h3>
-                <p className="text-xs text-muted-foreground">Región Andina</p>
-              </div>
-            )}
+        <div className="flex items-center gap-2 px-2">
+          <div className="bg-gradient-to-br from-agriculture-terracotta to-agriculture-earth h-8 w-8 rounded-full flex items-center justify-center">
+            <Leaf className="text-white h-5 w-5" />
           </div>
-          <SidebarTrigger />
+          <div>
+            <h3 className="font-semibold text-lg text-gradient">AgroClima</h3>
+            <p className="text-xs text-muted-foreground">Región Andina</p>
+          </div>
         </div>
       </SidebarHeader>
       <SidebarSeparator />
@@ -107,13 +116,13 @@ export function AppSidebar() {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.path}>
-                  <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
+                  <SidebarMenuButton asChild isActive={isActive(item.path)}>
                     <Link 
                       to={item.path} 
                       className={`flex items-center ${isActive(item.path) ? 'text-agriculture-terracotta font-medium' : 'hover:text-agriculture-terracotta'}`}
                     >
                       <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-terracotta' : ''}`} />
-                      {!collapsed && <span>{item.label}</span>}
+                      <span>{item.label}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -128,13 +137,13 @@ export function AppSidebar() {
             <SidebarMenu>
               {resourceItems.map((item) => (
                 <SidebarMenuItem key={item.path}>
-                  <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
+                  <SidebarMenuButton asChild isActive={isActive(item.path)}>
                     <Link 
                       to={item.path} 
                       className={`flex items-center ${isActive(item.path) ? 'text-agriculture-brown font-medium' : 'hover:text-agriculture-brown'}`}
                     >
                       <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-brown' : ''}`} />
-                      {!collapsed && <span>{item.label}</span>}
+                      <span>{item.label}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -143,20 +152,20 @@ export function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
 
-        {/* New Chatbot and assistance section */}
+        {/* Chatbot and assistance section */}
         <SidebarGroup>
           <SidebarGroupLabel className="text-agriculture-gold font-medium">Asistencia</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {chatItems.map((item) => (
                 <SidebarMenuItem key={item.path}>
-                  <SidebarMenuButton asChild isActive={isActive(item.path)} tooltip={collapsed ? item.label : undefined}>
+                  <SidebarMenuButton asChild isActive={isActive(item.path)}>
                     <Link 
                       to={item.path} 
                       className={`flex items-center ${isActive(item.path) ? 'text-agriculture-gold font-medium' : 'hover:text-agriculture-gold'}`}
                     >
                       <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-gold' : ''}`} />
-                      {!collapsed && <span>{item.label}</span>}
+                      <span>{item.label}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -167,20 +176,24 @@ export function AppSidebar() {
 
         <SidebarSeparator className="bg-agriculture-terracotta/10" />
         
+        {/* Account section */}
         <SidebarGroup>
+          <SidebarGroupLabel className="text-agriculture-terracotta font-medium">Mi Cuenta</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={isActive("/ajustes")} tooltip={collapsed ? "Ajustes" : undefined}>
-                  <Link 
-                    to="/ajustes" 
-                    className={`flex items-center ${isActive("/ajustes") ? 'text-agriculture-gold font-medium' : 'hover:text-agriculture-gold'}`}
-                  >
-                    <Settings className={`h-4 w-4 mr-2 ${isActive("/ajustes") ? 'text-agriculture-gold' : ''}`} />
-                    {!collapsed && <span>Ajustes</span>}
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
+              {accountItems.map((item) => (
+                <SidebarMenuItem key={item.path}>
+                  <SidebarMenuButton asChild isActive={isActive(item.path)}>
+                    <Link 
+                      to={item.path} 
+                      className={`flex items-center ${isActive(item.path) ? 'text-agriculture-terracotta font-medium' : 'hover:text-agriculture-terracotta'}`}
+                    >
+                      <item.icon className={`h-4 w-4 mr-2 ${isActive(item.path) ? 'text-agriculture-terracotta' : ''}`} />
+                      <span>{item.label}</span>
+                    </Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
