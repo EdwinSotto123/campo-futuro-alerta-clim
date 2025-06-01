@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,32 +18,16 @@ import {
   Settings, 
   Brain,
   Video as VideoIcon,
-  Users,
   Download,
   MessageCircle,
   Star,
-  Globe
+  Globe,
+  X,
+  ChevronDown
 } from "lucide-react";
-import { videosDatabase, searchVideos, getVideosByCategory } from "@/data/videosDatabase";
+import { videosDatabase, searchVideos, getVideosByCategory, VideoRecord } from "@/data/videosDatabase";
 
-interface VideoContent {
-  id: string;
-  title: string;
-  description: string;
-  duration: string;
-  category: string;
-  difficulty: "Básico" | "Intermedio" | "Avanzado";
-  tags: string[];
-  thumbnail: string;
-  url: string;
-  views: number;
-  relevanceScore?: number;
-  instructor?: string;
-  language: string;
-  subtitles: boolean;
-}
-
-interface FarmerProfile {
+type FarmerProfile = {
   crops: string[];
   irrigationMethods: string[];
   chemicals: string[];
@@ -51,12 +35,17 @@ interface FarmerProfile {
   experience: string;
   location: string;
   challenges: string[];
-}
+};
 
 const CentroAprendizaje = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("recomendados");
-  const [farmerProfile, setFarmerProfile] = useState<FarmerProfile>({
+  const [showAIChat, setShowAIChat] = useState(false);
+  const [aiQuestion, setAiQuestion] = useState("");
+  const [aiResponse, setAiResponse] = useState("");
+  const [isAiLoading, setIsAiLoading] = useState(false);
+  
+  const farmerProfile: FarmerProfile = {
     crops: ["Papa", "Maíz", "Quinua"],
     irrigationMethods: ["Riego por aspersión", "Riego por goteo"],
     chemicals: ["Fertilizantes orgánicos", "Pesticidas naturales"],
@@ -64,7 +53,7 @@ const CentroAprendizaje = () => {
     experience: "5-10 años",
     location: "Región Andina",
     challenges: ["Cambio climático", "Plagas", "Sequías"]
-  });
+  };
 
   // Función para obtener thumbnail de YouTube
   const getYouTubeThumbnail = (url: string): string => {
@@ -75,24 +64,62 @@ const CentroAprendizaje = () => {
     return "/api/placeholder/320/180";
   };
 
-  // Algoritmo LLM mejorado para recomendaciones personalizadas
-  const getPersonalizedRecommendations = (profile: FarmerProfile, videos: VideoContent[]): VideoContent[] => {
+  // Función de IA para responder preguntas agrícolas
+  const handleAIQuestion = async () => {
+    if (!aiQuestion.trim()) return;
+    
+    setIsAiLoading(true);
+    setAiResponse("");
+
+    try {
+      await new Promise(resolve => setTimeout(resolve, 1500));
+
+      const responses = [
+        {
+          condition: aiQuestion.toLowerCase().includes("plaga"),
+          answer: `🌾 **Recomendaciones para Control de Plagas**\n\nBasado en tus cultivos (${farmerProfile.crops.join(", ")}):\n\n1. **Control Preventivo**: Trampas amarillas para monitoreo\n2. **Control Biológico**: Bacillus thuringiensis para larvas\n3. **Control Orgánico**: Extractos de ajo y jabón potásico\n4. **Rotación de cultivos**: Rompe ciclos de plagas\n\n¿Te gustaría videos específicos sobre control de plagas en ${farmerProfile.crops[0]}?`
+        },
+        {
+          condition: aiQuestion.toLowerCase().includes("riego"),
+          answer: `💧 **Recomendaciones de Riego**\n\nPara ${farmerProfile.location} y cultivos de ${farmerProfile.crops.join(", ")}:\n\n1. **Riego por Goteo**: Ahorra 40% de agua\n2. **Frecuencia**: 2-3 veces por semana\n3. **Horarios**: 6-8 AM para evitar evaporación\n4. **Mulching**: Conserva humedad del suelo\n\nCon ${farmerProfile.experience} de experiencia, considera sensores IoT.`
+        },
+        {
+          condition: aiQuestion.toLowerCase().includes("fertiliz"),
+          answer: `🌱 **Fertilización Orgánica**\n\nSegún tu preferencia por métodos orgánicos:\n\n1. **Compost**: 3 meses de fermentación\n2. **Humus de lombriz**: Ideal para papa y maíz\n3. **Abonos verdes**: Leguminosas entre cultivos\n4. **Biol**: Estiércol + melaza por 30 días\n\nPara ${farmerProfile.farmSize}: 2-3 ton/hectárea de compost.`
+        },
+        {
+          condition: aiQuestion.toLowerCase().includes("clima") || aiQuestion.toLowerCase().includes("helada"),
+          answer: `🌡️ **Adaptación Climática**\n\nPara ${farmerProfile.location}:\n\n1. **Predicción**: Termómetros de máx/mín\n2. **Protección**: Micro túneles térmicos\n3. **Variedades**: Cultivares resistentes al frío\n4. **Riego**: Antes de heladas (efecto térmico)\n\n¿Necesitas variedades de papa resistentes a heladas?`
+        }
+      ];
+
+      const matchedResponse = responses.find(r => r.condition);
+      const finalResponse = matchedResponse?.answer || 
+        `🔍 **Consulta Personalizada**\n\n**Tu perfil**: ${farmerProfile.crops.join(", ")} en ${farmerProfile.location}\n**Experiencia**: ${farmerProfile.experience}\n\nPara "${aiQuestion}":\n\n1. Consulta técnicos locales especializados\n2. Revisa condiciones específicas de tu zona\n3. Considera prácticas tradicionales exitosas\n4. Implementa pruebas piloto pequeñas\n\n¿Podrías ser más específico en tu consulta?`;
+
+      setAiResponse(finalResponse);
+    } catch (error) {
+      setAiResponse("❌ Error procesando consulta. Intenta nuevamente.");
+    } finally {
+      setIsAiLoading(false);
+    }
+  };
+
+  // Algoritmo de recomendaciones personalizadas
+  const getPersonalizedRecommendations = (videos: VideoRecord[]): VideoRecord[] => {
     return videos.map(video => {
       let relevanceScore = 0;
       
-      // Puntuación basada en cultivos del perfil (peso alto)
-      profile.crops.forEach(crop => {
+      farmerProfile.crops.forEach(crop => {
         if (video.tags.some(tag => tag.toLowerCase().includes(crop.toLowerCase()))) {
           relevanceScore += 35;
         }
-        // Bonus por coincidencia exacta en título
         if (video.title.toLowerCase().includes(crop.toLowerCase())) {
           relevanceScore += 15;
         }
       });
       
-      // Puntuación basada en métodos de riego (peso medio-alto)
-      profile.irrigationMethods.forEach(method => {
+      farmerProfile.irrigationMethods.forEach(method => {
         if (method.toLowerCase().includes("goteo") && 
             video.tags.some(tag => tag.toLowerCase().includes("goteo"))) {
           relevanceScore += 30;
@@ -103,14 +130,12 @@ const CentroAprendizaje = () => {
         }
       });
       
-      // Puntuación basada en químicos/métodos orgánicos (peso medio)
-      if (profile.chemicals.some(chem => chem.toLowerCase().includes("orgánico")) && 
+      if (farmerProfile.chemicals.some(chem => chem.toLowerCase().includes("orgánico")) && 
           video.tags.some(tag => tag.toLowerCase().includes("orgánico"))) {
         relevanceScore += 25;
       }
       
-      // Puntuación basada en desafíos específicos (peso alto)
-      profile.challenges.forEach(challenge => {
+      farmerProfile.challenges.forEach(challenge => {
         if (challenge.toLowerCase().includes("plaga") && 
             (video.category === "plagas" || video.tags.some(tag => tag.includes("plagas")))) {
           relevanceScore += 30;
@@ -119,57 +144,21 @@ const CentroAprendizaje = () => {
             (video.category === "clima" || video.tags.some(tag => tag.includes("clima")))) {
           relevanceScore += 30;
         }
-        if (challenge.toLowerCase().includes("sequía") && 
-            video.tags.some(tag => tag.toLowerCase().includes("sequía") || tag.includes("agua"))) {
-          relevanceScore += 25;
-        }
-        if (challenge.toLowerCase().includes("cambio climático") && 
-            video.tags.some(tag => tag.toLowerCase().includes("cambio climático") || tag.includes("adaptación"))) {
-          relevanceScore += 35;
-        }
       });
       
-      // Puntuación basada en ubicación geográfica (peso medio)
-      if (profile.location.toLowerCase().includes("andina") && 
-          video.tags.some(tag => tag.toLowerCase().includes("andino") || tag.includes("región andina"))) {
-        relevanceScore += 20;
-      }
-      
-      // Puntuación basada en experiencia y dificultad (peso bajo-medio)
-      if (profile.experience.includes("5-10") && video.difficulty === "Intermedio") {
-        relevanceScore += 15;
-      } else if (profile.experience.includes("menos") && video.difficulty === "Básico") {
-        relevanceScore += 15;
-      } else if (profile.experience.includes("más de 10") && video.difficulty === "Avanzado") {
-        relevanceScore += 15;
-      }
-      
-      // Puntuación basada en tamaño de finca (peso bajo)
-      if (profile.farmSize.includes("2-5") && 
-          video.tags.some(tag => tag.toLowerCase().includes("pequeños agricultores"))) {
-        relevanceScore += 10;
-      }
-      
-      // Bonus por popularidad (peso muy bajo)
-      if (video.views > 20000) {
-        relevanceScore += 5;
-      }
-      
-      // Bonus por instructor reconocido (peso bajo)
-      if (video.instructor && video.instructor.includes("Dr.")) {
-        relevanceScore += 8;
-      }
+      if (video.views > 20000) relevanceScore += 5;
+      if (video.instructor?.includes("Dr.")) relevanceScore += 8;
       
       return { ...video, relevanceScore };
     }).sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
   };
 
-  const [recommendedVideos, setRecommendedVideos] = useState<VideoContent[]>([]);
+  const [recommendedVideos, setRecommendedVideos] = useState<VideoRecord[]>([]);
 
   useEffect(() => {
-    const personalizedVideos = getPersonalizedRecommendations(farmerProfile, videosDatabase as VideoContent[]);
+    const personalizedVideos = getPersonalizedRecommendations(videosDatabase);
     setRecommendedVideos(personalizedVideos);
-  }, [farmerProfile]);
+  }, []);
 
   const categories = [
     { id: "recomendados", label: "Recomendados IA", icon: Brain, count: recommendedVideos.length },
@@ -187,7 +176,7 @@ const CentroAprendizaje = () => {
       return recommendedVideos;
     }
     
-    let videos = getVideosByCategory(selectedCategory) as VideoContent[];
+    let videos = getVideosByCategory(selectedCategory);
     
     if (searchTerm) {
       videos = videos.filter(video => 
@@ -202,7 +191,77 @@ const CentroAprendizaje = () => {
 
   const filteredVideos = getFilteredVideos();
 
-  const VideoCard = ({ video }: { video: VideoContent }) => {
+  // Componente de Chat de IA - SIMPLIFICADO
+  const AIChat = () => (
+    <Card className="border-agriculture-terracotta/20 bg-gradient-to-br from-white to-agriculture-earth/5 shadow-lg">
+      <CardHeader className="relative">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="absolute top-2 right-2 h-8 w-8 p-0"
+          onClick={() => setShowAIChat(false)}
+        >
+          <X className="h-4 w-4" />
+        </Button>
+        <CardTitle className="flex items-center gap-2 text-agriculture-terracotta pr-8">
+          <Brain className="h-5 w-5" />
+          Consulta Agrícola con IA
+        </CardTitle>
+        <CardDescription>
+          Haz preguntas específicas sobre cultivos, plagas, riego, fertilización o cualquier desafío agrícola
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="space-y-2">
+          <label className="text-sm font-medium">Tu consulta:</label>
+          <Input
+            placeholder="Ej: ¿Cómo controlar plagas en papa de forma orgánica?"
+            value={aiQuestion}
+            onChange={(e) => setAiQuestion(e.target.value)}
+            className="min-h-[2.5rem]"
+            disabled={isAiLoading}
+          />
+        </div>
+        
+        <Button 
+          onClick={handleAIQuestion}
+          disabled={isAiLoading || !aiQuestion.trim()}
+          className="w-full bg-agriculture-terracotta hover:bg-agriculture-terracotta/90"
+        >
+          {isAiLoading ? (
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              Analizando...
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <MessageCircle className="h-4 w-4" />
+              Preguntar a la IA
+            </div>
+          )}
+        </Button>
+
+        {aiResponse && (
+          <div className="bg-agriculture-earth/10 p-4 rounded-lg border border-agriculture-earth/20">
+            <div className="flex items-start gap-2 mb-2">
+              <Brain className="h-4 w-4 text-agriculture-terracotta mt-1 flex-shrink-0" />
+              <span className="text-sm font-medium text-agriculture-terracotta">Especialista IA:</span>
+            </div>
+            <div className="text-sm leading-relaxed whitespace-pre-line text-gray-700">
+              {aiResponse}
+            </div>
+          </div>
+        )}
+
+        <div className="text-xs text-muted-foreground bg-gray-50 p-2 rounded">
+          💡 Respuestas personalizadas para: {farmerProfile.crops.join(", ")} en {farmerProfile.location}
+        </div>
+      </CardContent>
+    </Card>
+  );
+
+  // Componente de tarjeta de video
+  const VideoCard = ({ video }: { video: VideoRecord }) => {
     const handleVideoClick = () => {
       window.open(video.url, '_blank');
     };
@@ -300,117 +359,142 @@ const CentroAprendizaje = () => {
   };
 
   return (
-    <div className="space-y-6 p-6">
-      {/* Header */}
-      <div className="text-center space-y-4">
-        <div className="flex items-center justify-center gap-2">
-          <BookOpen className="h-8 w-8 text-agriculture-terracotta" />
-          <h1 className="text-3xl font-bold text-gradient">Centro de Aprendizaje</h1>
+    <div className="min-h-screen bg-gradient-to-br from-white to-agriculture-earth/5">
+      <div className="container mx-auto px-4 py-6 space-y-8">
+        {/* Header */}
+        <div className="text-center space-y-4">
+          <div className="flex items-center justify-center gap-3">
+            <BookOpen className="h-10 w-10 text-agriculture-terracotta" />
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-agriculture-terracotta to-agriculture-earth bg-clip-text text-transparent">
+              Centro de Aprendizaje
+            </h1>
+          </div>
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed text-lg">
+            Aprende técnicas agrícolas, identifica plagas y enfermedades, y prepárate para 
+            fenómenos climáticos con nuestros recursos educativos especializados.
+          </p>
         </div>
-        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          Aprende técnicas agrícolas, identifica plagas y enfermedades, y prepárate para 
-          fenómenos climáticos con nuestros recursos educativos especializados.
-        </p>
-      </div>
 
-      {/* Search Bar */}
-      <div className="relative max-w-md mx-auto">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-        <Input
-          placeholder="Buscar videos, tutoriales o recursos..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="pl-10 h-12"
-        />
-      </div>
+        {/* Search Bar */}
+        <div className="relative max-w-xl mx-auto">
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
+          <Input
+            placeholder="Buscar videos, tutoriales o recursos..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-12 h-14 text-base border-2 border-agriculture-terracotta/20 focus:border-agriculture-terracotta"
+          />
+        </div>
 
-      {/* Quick Actions */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-        <Card className="text-center p-6 hover:shadow-md transition-shadow cursor-pointer">
-          <VideoIcon className="h-8 w-8 text-agriculture-terracotta mx-auto mb-3" />
-          <h3 className="font-semibold mb-1">Videos Educativos</h3>
-          <p className="text-sm text-muted-foreground">Tutoriales paso a paso</p>
-        </Card>
-        <Card className="text-center p-6 hover:shadow-md transition-shadow cursor-pointer">
-          <MessageCircle className="h-8 w-8 text-agriculture-earth mx-auto mb-3" />
-          <h3 className="font-semibold mb-1">Pregunta a la IA</h3>
-          <p className="text-sm text-muted-foreground">Consultas personalizadas</p>
-        </Card>
-        <Card className="text-center p-6 hover:shadow-md transition-shadow cursor-pointer">
-          <Download className="h-8 w-8 text-agriculture-brown mx-auto mb-3" />
-          <h3 className="font-semibold mb-1">Recursos Descargables</h3>
-          <p className="text-sm text-muted-foreground">Guías y manuales PDF</p>
-        </Card>
-      </div>
+        {/* Quick Actions */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <Card 
+            className="text-center p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-agriculture-terracotta/20 group"
+            onClick={() => {
+              setShowAIChat(false);
+              setSelectedCategory("recomendados");
+            }}
+          >
+            <VideoIcon className="h-10 w-10 text-agriculture-terracotta mx-auto mb-4 group-hover:scale-110 transition-transform" />
+            <h3 className="font-bold text-lg mb-2">Videos Educativos</h3>
+            <p className="text-sm text-muted-foreground">Tutoriales paso a paso personalizados</p>
+          </Card>
+          
+          <Card 
+            className="text-center p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-agriculture-earth/20 group"
+            onClick={() => setShowAIChat(!showAIChat)}
+          >
+            <MessageCircle className="h-10 w-10 text-agriculture-earth mx-auto mb-4 group-hover:scale-110 transition-transform" />
+            <h3 className="font-bold text-lg mb-2">Pregunta a la IA</h3>
+            <p className="text-sm text-muted-foreground">Consultas agrícolas personalizadas</p>
+          </Card>
+          
+          <Card className="text-center p-6 hover:shadow-xl transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-agriculture-brown/20 group">
+            <Download className="h-10 w-10 text-agriculture-brown mx-auto mb-4 group-hover:scale-110 transition-transform" />
+            <h3 className="font-bold text-lg mb-2">Recursos Descargables</h3>
+            <p className="text-sm text-muted-foreground">Guías y manuales en PDF</p>
+          </Card>
+        </div>
 
-      {/* Categories */}
-      <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-        <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 w-full h-auto p-1 gap-1">
-          {categories.map(category => (
-            <TabsTrigger
-              key={category.id}
-              value={category.id}
-              className="flex flex-col items-center gap-1 p-3 h-auto min-h-[4rem] text-center"
-            >
-              <category.icon className="h-4 w-4 shrink-0" />
-              <span className="text-xs font-medium leading-tight">{category.label}</span>
-              <Badge variant="secondary" className="text-xs min-w-[1.5rem] h-5">
-                {category.count}
-              </Badge>
-            </TabsTrigger>
-          ))}
-        </TabsList>
-
-        {/* Profile-based recommendations info */}
-        {selectedCategory === "recomendados" && (
-          <div className="bg-gradient-to-r from-agriculture-terracotta/10 to-agriculture-earth/10 p-6 rounded-lg border border-agriculture-terracotta/20 mt-6">
-            <div className="flex items-center gap-2 mb-3">
-              <Brain className="h-5 w-5 text-agriculture-terracotta" />
-              <h3 className="font-semibold text-lg">Recomendaciones Personalizadas con IA</h3>
-            </div>
-            <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
-              Basadas en tu perfil: <strong>{farmerProfile.crops.join(", ")}</strong> • <strong>{farmerProfile.irrigationMethods.join(", ")}</strong> • <strong>{farmerProfile.location}</strong>
-            </p>
-            <div className="flex flex-wrap gap-2 mb-3">
-              {farmerProfile.challenges.map(challenge => (
-                <Badge key={challenge} variant="outline" className="text-xs">
-                  {challenge}
-                </Badge>
-              ))}
-            </div>
-            <p className="text-xs text-muted-foreground flex items-center gap-1">
-              💡 Los videos están ordenados por relevancia según tu perfil agrícola
-            </p>
+        {/* Chat de IA */}
+        {showAIChat && (
+          <div className="max-w-3xl mx-auto">
+            <AIChat />
           </div>
         )}
 
-        {/* Video Grid */}
-        <TabsContent value={selectedCategory} className="mt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredVideos.slice(0, 12).map(video => (
-              <VideoCard key={video.id} video={video} />
-            ))}
-          </div>
-          
-          {filteredVideos.length === 0 && (
-            <div className="text-center py-12">
-              <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-lg font-semibold mb-2">No se encontraron videos</h3>
-              <p className="text-muted-foreground">
-                Intenta con otros términos de búsqueda o selecciona una categoría diferente.
-              </p>
-            </div>
-          )}
+        {/* Categories Tabs */}
+        {!showAIChat && (
+          <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+            <TabsList className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 w-full h-auto p-2 gap-2 bg-agriculture-earth/5">
+              {categories.map(category => (
+                <TabsTrigger
+                  key={category.id}
+                  value={category.id}
+                  className="flex flex-col items-center gap-2 p-4 h-auto min-h-[5rem] text-center data-[state=active]:bg-agriculture-terracotta data-[state=active]:text-white"
+                >
+                  <category.icon className="h-5 w-5 shrink-0" />
+                  <span className="text-xs font-medium leading-tight">{category.label}</span>
+                  <Badge variant="secondary" className="text-xs min-w-[1.5rem] h-5 data-[state=active]:bg-white data-[state=active]:text-agriculture-terracotta">
+                    {category.count}
+                  </Badge>
+                </TabsTrigger>
+              ))}
+            </TabsList>
 
-          {filteredVideos.length > 12 && (
-            <div className="text-center mt-8">
-              <Button variant="outline" size="lg">
-                Cargar más videos ({filteredVideos.length - 12} restantes)
-              </Button>
-            </div>
-          )}
-        </TabsContent>
-      </Tabs>
+            {/* Profile-based recommendations info */}
+            {selectedCategory === "recomendados" && (
+              <div className="bg-gradient-to-r from-agriculture-terracotta/10 to-agriculture-earth/10 p-6 rounded-lg border border-agriculture-terracotta/20 mt-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Brain className="h-6 w-6 text-agriculture-terracotta" />
+                  <h3 className="font-bold text-xl text-agriculture-terracotta">Recomendaciones Personalizadas con IA</h3>
+                </div>
+                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                  Basadas en tu perfil: <strong>{farmerProfile.crops.join(", ")}</strong> • <strong>{farmerProfile.irrigationMethods.join(", ")}</strong> • <strong>{farmerProfile.location}</strong>
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {farmerProfile.challenges.map(challenge => (
+                    <Badge key={challenge} variant="outline" className="text-xs">
+                      {challenge}
+                    </Badge>
+                  ))}
+                </div>
+                <p className="text-xs text-muted-foreground flex items-center gap-2">
+                  ⭐ Los videos están ordenados por relevancia según tu perfil agrícola
+                </p>
+              </div>
+            )}
+
+            {/* Video Grid */}
+            <TabsContent value={selectedCategory} className="mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                {filteredVideos.slice(0, 12).map(video => (
+                  <VideoCard key={video.id} video={video} />
+                ))}
+              </div>
+              
+              {filteredVideos.length === 0 && (
+                <div className="text-center py-16">
+                  <BookOpen className="h-16 w-16 text-muted-foreground mx-auto mb-6" />
+                  <h3 className="text-xl font-semibold mb-3">No se encontraron videos</h3>
+                  <p className="text-muted-foreground max-w-md mx-auto">
+                    Intenta con otros términos de búsqueda o selecciona una categoría diferente.
+                  </p>
+                </div>
+              )}
+
+              {filteredVideos.length > 12 && (
+                <div className="text-center mt-10">
+                  <Button variant="outline" size="lg" className="gap-2">
+                    <ChevronDown className="h-4 w-4" />
+                    Cargar más videos ({filteredVideos.length - 12} restantes)
+                  </Button>
+                </div>
+              )}
+            </TabsContent>
+          </Tabs>
+        )}
+      </div>
     </div>
   );
 };

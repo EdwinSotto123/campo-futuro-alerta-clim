@@ -1,4 +1,4 @@
-export interface Video {
+export interface VideoRecord {
   id: string;
   title: string;
   description: string;
@@ -15,7 +15,7 @@ export interface Video {
   subtitles: boolean;
 }
 
-export const videosDatabase: Video[] = [
+export const videosDatabase: VideoRecord[] = [
   // Riego y Agua
   {
     id: "1",
@@ -303,11 +303,11 @@ export const videosDatabase: Video[] = [
   }
 ];
 
-export const getVideosByCategory = (category: string): Video[] => {
+export const getVideosByCategory = (category: string): VideoRecord[] => {
   return videosDatabase.filter(video => video.category === category);
 };
 
-export const searchVideos = (query: string): Video[] => {
+export const searchVideos = (query: string): VideoRecord[] => {
   const lowercaseQuery = query.toLowerCase();
   return videosDatabase.filter(video => 
     video.title.toLowerCase().includes(lowercaseQuery) ||
