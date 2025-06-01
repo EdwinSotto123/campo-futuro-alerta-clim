@@ -1,6 +1,5 @@
-
 import { 
-  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite, Shield, AlertTriangle, Sprout
+  Home, Bell, BarChart2, CloudRain, Users, PiggyBank, MessageSquare, Settings, Leaf, Bot, HelpCircle, Globe, TreePine, Map, Brain, Satellite, Shield, AlertTriangle, Sprout, BookOpen
 } from "lucide-react";
 import { useLocation } from "react-router-dom";
 import { 
@@ -40,6 +39,11 @@ export function AppSidebar() {
       icon: CloudRain, 
       label: "Alertas Climáticas", 
       path: "/alertas" 
+    },
+    { 
+      icon: BookOpen, 
+      label: "Centro de Aprendizaje", 
+      path: "/centro-aprendizaje" 
     },
     { 
       icon: MessageSquare, 

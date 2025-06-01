@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -15,8 +14,7 @@ import {
   Wheat,
   Apple,
   Carrot,
-  Corn,
-  Barn
+  Warehouse
 } from "lucide-react";
 
 const MiParcela = () => {
@@ -25,7 +23,7 @@ const MiParcela = () => {
   // Datos de ejemplo para los cultivos con colores más realistas
   const crops = [
     { id: 1, name: "Tomates", icon: Apple, stage: "Floración", health: 85, days: 45, color: "bg-red-500" },
-    { id: 2, name: "Maíz", icon: Corn, stage: "Crecimiento", health: 92, days: 30, color: "bg-yellow-500" },
+    { id: 2, name: "Maíz", icon: Wheat, stage: "Crecimiento", health: 92, days: 30, color: "bg-yellow-500" },
     { id: 3, name: "Lechugas", icon: Carrot, stage: "Maduro", health: 78, days: 5, color: "bg-green-500" },
     { id: 4, name: "Trigo", icon: Wheat, stage: "Siembra", health: 100, days: 90, color: "bg-amber-400" },
     { id: 5, name: "Zanahorias", icon: Carrot, stage: "Crecimiento", health: 88, days: 25, color: "bg-orange-500" },
@@ -33,7 +31,7 @@ const MiParcela = () => {
   ];
 
   const buildings = [
-    { id: 1, name: "Granero", icon: Barn, x: 15, y: 15, color: "bg-red-700" },
+    { id: 1, name: "Granero", icon: Warehouse, x: 15, y: 15, color: "bg-red-700" },
     { id: 2, name: "Casa", icon: Home, x: 85, y: 20, color: "bg-blue-600" },
     { id: 3, name: "Tractor", icon: Tractor, x: 250, y: 30, color: "bg-green-700" },
     { id: 4, name: "Almacén", icon: Truck, x: 320, y: 25, color: "bg-gray-600" },
@@ -92,7 +90,7 @@ const MiParcela = () => {
           <Card className="shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Barn className="h-5 w-5 text-red-600" />
+                <Warehouse className="h-5 w-5 text-red-600" />
                 Vista de la Granja
               </CardTitle>
               <CardDescription>Haz clic en los cultivos para ver detalles • Estilo Farm Village</CardDescription>
@@ -239,9 +237,14 @@ const MiParcela = () => {
             <Card className="border-2 border-yellow-200 bg-gradient-to-br from-yellow-50 to-amber-50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  {plots.find(p => p.id === selectedPlot)?.crop.icon && (
-                    <plots.find(p => p.id === selectedPlot)!.crop.icon className="h-5 w-5" />
-                  )}
+                  {(() => {
+                    const selectedCrop = plots.find(p => p.id === selectedPlot);
+                    if (selectedCrop) {
+                      const IconComponent = selectedCrop.crop.icon;
+                      return <IconComponent className="h-5 w-5" />;
+                    }
+                    return null;
+                  })()}
                   {plots.find(p => p.id === selectedPlot)?.crop.name}
                 </CardTitle>
                 <CardDescription>Parcela #{selectedPlot}</CardDescription>
